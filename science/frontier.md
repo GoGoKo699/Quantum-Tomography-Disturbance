@@ -4,7 +4,7 @@
 
 ## Uniform order theorem
 
-There are universal positive constants $`c,C,C_0,\epsilon_0`$ such that, for every known radius $`1/2\le r\le1`$, every integer $`T`$, and every $`C_0/T\le\epsilon\le\epsilon_0`$,
+There are universal positive constants $`c,C,C_0,\epsilon_0`$ such that, for every known radius $`1/2\le r\le1`$, every integer $`T\ge1`$, and every $`C_0/T\le\epsilon\le\epsilon_0`$,
 
 $$
 c\left[\log(1+T)+\sqrt{\kappa T}+\frac\kappa\epsilon\right]
@@ -34,7 +34,7 @@ Different priors can witness different lower terms: minimax performance dominate
 At fixed nonzero mixedness, optimizing measurement reward or disturbance without a stringent final estimate has a square-root sample cost. A final estimate at the standard tomography scale is more demanding. If $`\epsilon=A/T`$ with a sufficiently large fixed $`A`$, then
 
 $$
-D_{\min}=\Theta\!\left(\log(1+T)+\kappa T\right).
+D_{\min}=\Theta\left(\log(1+T)+\kappa T\right).
 $$
 
 Here $`\sqrt{\kappa T}`$ is absorbed by $`1+\kappa T`$. At any fixed $`\kappa>0`$, this is linear in $`T`$; at $`\kappa=0`$ it is logarithmic. Thus sample-optimal terminal tomography and sublinear cumulative projective disturbance cannot coexist at fixed mixedness in this model. This is an order statement for $`\epsilon=\Theta(1/T)`$, not for every precision described loosely as “sample-optimal up to logarithms.” For example, $`\epsilon=\log(T)/T`$ only incurs the terminal lower term $`\kappa T/\log T`$.

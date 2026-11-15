@@ -2,6 +2,9 @@
 
 This repository studies the joint finite-parameter accuracy–disturbance frontier for sequential tomography of known-radius qubits. Authoritative science is organized by topic under science/.
 
+Selected educational source: John Watrous, The Theory of Quantum Information (2018), author standard-layout manuscript.
+Learning route: learning/README.md; learning/watrous_bridge.md; exactly30 project-defined milestones in learning/milestones.md. These common understanding targets contain no personal learner records.
+
 Story and physical meaning: README.md; science/interpretation.md.
 Exact source, instrument, chronology, physical objective and minimax quantifiers: science/model.md.
 Uniform theorem and precision regimes: science/frontier.md.

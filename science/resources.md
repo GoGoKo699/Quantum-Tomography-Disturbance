@@ -24,9 +24,9 @@ C\left[\log(1+T)+\sqrt{\kappa T}+\frac{\kappa}{\epsilon}\right],
 \qquad \kappa=1-r^2.
 $$
 
-The construction consumes exactly $`T`$ fresh source specimens and uses exactly $`T`$ logical single-qubit projective readouts. It retains no quantum register between specimens. Its persistent numerical state has $`O(\log(T+1))`$ bits, while arithmetic and a conservative gate compiler use $`\operatorname{polylog}(T+1)`$ classical working bits and elementary bit operations per round. Each basis measurement has a $`\operatorname{polylog}(T+1)`$ logical gate synthesis. These are sufficient costs, not optimal gate or arithmetic bounds.
+The construction consumes exactly $`T`$ fresh source specimens and uses exactly $`T`$ logical single-qubit projective readouts. It retains no quantum register between specimens. Its persistent numerical state has $`O(\log(T+1))`$ bits, while arithmetic and a conservative gate compiler use $`\mathrm{polylog}(T+1)`$ classical working bits and elementary bit operations per round. Each basis measurement has a $`\mathrm{polylog}(T+1)`$ logical gate synthesis. These are sufficient costs, not optimal gate or arithmetic bounds.
 
-If one preparation has cost $`G`$, its contribution is $`TG`$, in addition to the $`T\operatorname{polylog}(T+1)`$ classical and logical control work and the $`T`$ readouts. The source is a native unknown-state source: the controller is not given its preparation circuit, inverse, purification or a state-loading oracle. The supplied radius is classical input. If it is specified numerically, $`O(\log(T+1))`$ accurate bits suffice; estimating an unsupplied radius would be a separate experiment.
+If one preparation has cost $`G`$, its contribution is $`TG`$, in addition to the $`T\mathrm{polylog}(T+1)`$ classical and logical control work and the $`T`$ readouts. The source is a native unknown-state source: the controller is not given its preparation circuit, inverse, purification or a state-loading oracle. The supplied radius is classical input. If it is specified numerically, $`O(\log(T+1))`$ accurate bits suffice; estimating an unsupplied radius would be a separate experiment.
 
 ## A digital state and a local comparison
 
@@ -35,7 +35,7 @@ Store the three coordinates of $`v_t`$ on a fixed binary grid with spacing $`2^{
 The analysis conditions on this **actual stored vector** before each round. If it is nonzero, define the reference direction by its exact mathematical normalization,
 
 $$
-w=\frac{v}{\|v\|}.
+w=\frac{v}{\Vert v\Vert }.
 $$
 
 Use the fixed north pole at zero. This is a comparison within the current round. It never compares a rounded adaptive trajectory with a different ideal trajectory, whose future normalizations might be far apart.
@@ -44,11 +44,11 @@ The exploration schedule satisfies
 
 $$
 c\ge\frac1{\sqrt2},\qquad
-s^2\ge\min\left\{\frac12,\frac{64}{t}\right\},\qquad
+s^2\ge\min\lbrace\frac12,\frac{64}{t}\rbrace,\qquad
 \frac1s\le C\sqrt{T+1}.
 $$
 
-Because $`r\ge1/2`$ and $`b\in\{-1,+1\}`$, the ideal one-round vector $`g`$ consequently has $`\|g\|\le C\sqrt{T+1}`$. The digital averaging update is a convex average plus its rounding error. Induction gives $`\|v_t\|\le C\sqrt{T+1}+CT2^{-B}`$ for all $`t\le T`$. The required integer part therefore has $`O(\log(T+1))`$ bits. A nonzero grid vector also satisfies $`\|v_t\|\ge2^{-B}`$.
+Because $`r\ge1/2`$ and $`b\in\lbrace -1,+1\rbrace `$, the ideal one-round vector $`g`$ consequently has $`\Vert g\Vert \le C\sqrt{T+1}`$. The digital averaging update is a convex average plus its rounding error. Induction gives $`\Vert v_t\Vert \le C\sqrt{T+1}+CT2^{-B}`$ for all $`t\le T`$. The required integer part therefore has $`O(\log(T+1))`$ bits. A nonzero grid vector also satisfies $`\Vert v_t\Vert \ge2^{-B}`$.
 
 Both bounds matter. Computing its unit direction to accuracy $`\delta`$ may require resolving the small norm, but only $`O(B+\log(T+1)+\log(1/\delta))`$ working digits. Taking $`\delta=(T+1)^{-K}`$ keeps that number logarithmic.
 
@@ -71,8 +71,8 @@ $$
 Clamping the computed value to the permitted interval, then rounding upward, gives this convention even when the state is much closer to purity than the working grid. Use
 
 $$
-s_t^2=\min\left\{\frac12,\frac{64}{t}
-                 +64\sqrt{\frac{\bar\nu}{t}}+q\right\},
+s_t^2=\min\lbrace\frac12,\frac{64}{t}
+                 +64\sqrt{\frac{\bar\nu}{t}}+q\rbrace,
 \qquad
 q=\frac{Q\bar\nu}{T\epsilon},
 $$
@@ -96,7 +96,7 @@ For each selected reference axis $`a`$, compute a one-qubit unitary $`U`$ with $
 
 This basis computation also admits bounded denominators. When $`a_z\ge0`$, take its positive eigenvector proportional to $`(1+a_z,a_x+i a_y)`$; when $`a_z<0`$, use $`(a_x-i a_y,1-a_z)`$. The respective normalizing factors are $`\sqrt{2(1+a_z)}`$ and $`\sqrt{2(1-a_z)}`$, each at least $`\sqrt2`$ on its chosen chart. Complete the vector to a two-by-two special unitary $`V`$ and take $`U=V^\dagger`$. A chart switch only changes the chosen representation; it introduces no small denominator.
 
-This realizes **exactly a rank-one Lüders instrument** along a unit axis $`\widetilde a`$, with $`\|\widetilde a-a\|\le C\delta`$. Using the inverse sequence is part of implementing the chosen projectors; it is not an outcome-dependent output repair. The model continues to assume ideal logical gates and readout. Gate synthesis is a controlled deterministic change of basis, not a theorem about arbitrary apparatus noise.
+This realizes **exactly a rank-one Lüders instrument** along a unit axis $`\widetilde a`$, with $`\Vert \widetilde a-a\Vert \le C\delta`$. Using the inverse sequence is part of implementing the chosen projectors; it is not an outcome-dependent output repair. The model continues to assume ideal logical gates and readout. Gate synthesis is a controlled deterministic change of basis, not a theorem about arbitrary apparatus noise.
 
 Conservative finite-set compilation is enough. For example, the [Dawson–Nielsen Solovay–Kitaev construction](https://arxiv.org/abs/quant-ph/0505030v2) compiles a one-qubit rotation with sequence length and classical computation polynomial in $`\log(1/\delta)`$. At inverse-polynomial $`\delta`$, both are polylogarithmic in $`T+1`$. Compiler working space is at most its polynomial running time. The resource statement counts logical gates; a hardware-specific fault-tolerant overhead is additional.
 
@@ -110,20 +110,20 @@ $$
 
 and its stated conditional variance formula, with the true $`\nu`$ and the selected $`s_t,c_t`$.
 
-The actual basis changes a conditional sign probability by at most $`C\delta`$. Since $`\|g_t^0\|\le C\sqrt{T+1}`$, its effect on the first and second moments is bounded by a fixed polynomial in $`T+1`$ times $`\delta`$. The arithmetic expression has the same type of bound: all of its denominators and its normalization precision have already been bounded. Finally, rounding the update of $`v_t`$ to its grid can be folded into the one-round vector as an error at most $`Ct2^{-B}`$.
+The actual basis changes a conditional sign probability by at most $`C\delta`$. Since $`\Vert g_t^0\Vert \le C\sqrt{T+1}`$, its effect on the first and second moments is bounded by a fixed polynomial in $`T+1`$ times $`\delta`$. The arithmetic expression has the same type of bound: all of its denominators and its normalization precision have already been bounded. Finally, rounding the update of $`v_t`$ to its grid can be folded into the one-round vector as an error at most $`Ct2^{-B}`$.
 
 Choose the digit and synthesis constants large enough to make the resulting effective vector $`\widetilde g_t`$ satisfy, uniformly over every digital history,
 
 $$
-\big\|\mathbb E[\widetilde g_t\mid\mathcal F_{t-1}]-n\big\|
+\big\Vert \mathbb E[\widetilde g_t\mid\mathcal F_{t-1}]-n\big\Vert 
 \le\eta,
 \qquad \eta\le(T+1)^{-4},
 $$
 
 $$
-\mathbb E[\|\widetilde g_t-n\|^2\mid\mathcal F_{t-1}]
+\mathbb E[\Vert \widetilde g_t-n\Vert ^2\mid\mathcal F_{t-1}]
 \le
-\mathbb E[\|g_t^0-n\|^2\mid\mathcal F_{t-1}]+1.
+\mathbb E[\Vert g_t^0-n\Vert ^2\mid\mathcal F_{t-1}]+1.
 $$
 
 The digital recursion is then exactly
@@ -137,7 +137,7 @@ Only these conditional moment bounds are used. There is no requirement that the 
 
 ## The contraction survives rounding
 
-Let $`M_t=\mathbb E\|v_t-n\|^2`$. The bias adds a cross term at most $`2\eta\sqrt{M_{t-1}}/t`$. Young's inequality gives
+Let $`M_t=\mathbb E\Vert v_t-n\Vert ^2`$. The bias adds a cross term at most $`2\eta\sqrt{M_{t-1}}/t`$. Young's inequality gives
 
 $$
 \frac{2\eta\sqrt{M_{t-1}}}{t}
@@ -191,10 +191,10 @@ $$
 using the digital mean-square bounds. It remains to compare that axis with the actually synthesized projective axis. As a function of $`u=r^2[1-(n\cdot a)^2]`$, the physical disturbance satisfies
 
 $$
-\frac14\le\frac{\partial d_*}{\partial u}\le\frac12
+\frac14\le\frac{\partial d_{\star}}{\partial u}\le\frac12
 $$
 
-where the derivative is understood by continuity at the pure endpoint. Also $`|u(\widetilde a)-u(a)|\le2\|\widetilde a-a\|`$. Hence the actual physical disturbance differs by at most $`C\delta`$ per round, uniformly in $`\kappa`$. The total extra term is $`CT\delta`$, a bounded quantity. Substituting $`q=Q\bar\nu/(T\epsilon)`$, $`\nu\le4\kappa`$ and the precision bounds above proves the resource statement.
+where the derivative is understood by continuity at the pure endpoint. Also $`|u(\widetilde a)-u(a)|\le2\Vert \widetilde a-a\Vert `$. Hence the actual physical disturbance differs by at most $`C\delta`$ per round, uniformly in $`\kappa`$. The total extra term is $`CT\delta`$, a bounded quantity. Substituting $`q=Q\bar\nu/(T\epsilon)`$, $`\nu\le4\kappa`$ and the precision bounds above proves the resource statement.
 
 The controller uses two random classical bits per tangent draw, a round counter, a three-vector and a bounded number of scalar work registers. One source qubit is active at a time; the released output is the postmeasurement specimen. The finite classical output and the optional numerical state conversion are counted. Keeping or printing every past outcome would require additional output storage, but it is unnecessary for the stated policy.
 

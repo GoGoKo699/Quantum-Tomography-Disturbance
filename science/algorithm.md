@@ -30,44 +30,55 @@ Then $`0\le\nu\le3`$ and $`0\le q\le1/2`$. At $`r=1`$, both $`\nu`$ and $`q`$ ar
 
 Initialize the real three-vector $`\boldsymbol v_0=\boldsymbol0`$. For $`t=1,\ldots,T`$:
 
-1. Normalize $`\boldsymbol v_{t-1}`$ to a unit vector $`\boldsymbol w_t`$. At zero, use the north pole $`(0,0,1)`$.
+### 1. Normalize the estimate
 
-2. Choose a deterministic orthonormal tangent pair $`\boldsymbol e_{t,1},\boldsymbol e_{t,2}`$ perpendicular to $`\boldsymbol w_t`$. An explicit rule crosses $`\boldsymbol w_t`$ with the Cartesian axis having the smallest absolute component, breaking ties by index, normalizes that cross product, and obtains the second vector by another cross product.
+Normalize $`\boldsymbol v_{t-1}`$ to a unit vector $`\boldsymbol w_t`$. At zero, use the north pole $`(0,0,1)`$.
 
-3. Draw $`\boldsymbol u_t`$ uniformly from the four vectors $`\{\boldsymbol e_{t,1},-\boldsymbol e_{t,1},\boldsymbol e_{t,2},-\boldsymbol e_{t,2}\}`$, independently of the source and previous draws. Set
+### 2. Choose a tangent frame
 
-   $$
-   s_t^2=\min\left\{\frac12,\frac{64}{t}
-                  +64\sqrt{\frac{\nu}{t}}+q\right\},
-   \qquad c_t=\sqrt{1-s_t^2}.
-   $$
+Choose a deterministic orthonormal tangent pair $`\boldsymbol e_{t,1},\boldsymbol e_{t,2}`$ perpendicular to $`\boldsymbol w_t`$. An explicit rule crosses $`\boldsymbol w_t`$ with the Cartesian axis having the smallest absolute component, breaking ties by index, normalizes that cross product, and obtains the second vector by another cross product.
 
-4. Measure the fresh specimen along the unit Bloch direction
+### 3. Select the probe
 
-   $$
-   \boldsymbol a_t=c_t\boldsymbol w_t+s_t\boldsymbol u_t.
-   $$
+Draw $`\boldsymbol u_t`$ uniformly from the four vectors $`\lbrace \boldsymbol e_{t,1},-\boldsymbol e_{t,1},\boldsymbol e_{t,2},-\boldsymbol e_{t,2}\rbrace `$, independently of the source and previous draws. Set
 
-   The projectors are $`(I\pm\boldsymbol a_t\cdot\boldsymbol\sigma)/2`$. Record $`b_t\in\{-1,+1\}`$ and put $`y_t=b_t/r`$. Born's rule gives $`\mathbb E[b_t\mid\boldsymbol a_t,\text{past}]=r\boldsymbol n\cdot\boldsymbol a_t`$.
+$$
+s_t^2=\min\lbrace\frac12,\frac{64}{t}
+               +64\sqrt{\frac{\nu}{t}}+q\rbrace,
+\qquad c_t=\sqrt{1-s_t^2}.
+$$
 
-5. Form
+### 4. Measure one specimen
 
-   $$
-   \boldsymbol g_t
-   =\boldsymbol w_t+(y_t-c_t)
-       \left(\frac{\boldsymbol w_t}{c_t}
-                    +\frac{2\boldsymbol u_t}{s_t}\right),
-   $$
+Measure the fresh specimen along the unit Bloch direction
 
-   and update
+$$
+\boldsymbol a_t=c_t\boldsymbol w_t+s_t\boldsymbol u_t.
+$$
 
-   $$
-   \boldsymbol v_t
-   =\left(1-\frac1t\right)\boldsymbol v_{t-1}
-      +\frac1t\boldsymbol g_t.
-   $$
+The projectors are $`(I\pm\boldsymbol a_t\cdot\boldsymbol\sigma)/2`$. Record $`b_t\in\lbrace -1,+1\rbrace `$ and put $`y_t=b_t/r`$. Born's rule gives $`\mathbb E[b_t\mid\boldsymbol a_t,\text{past}]=r\boldsymbol n\cdot\boldsymbol a_t`$.
+
+### 5. Update the classical vector
+
+Form
+
+$$
+\boldsymbol g_t
+=\boldsymbol w_t+(y_t-c_t)
+    \left(\frac{\boldsymbol w_t}{c_t}
+                 +\frac{2\boldsymbol u_t}{s_t}\right),
+$$
+
+and update
+
+$$
+\boldsymbol v_t
+=\left(1-\frac1t\right)\boldsymbol v_{t-1}
+   +\frac1t\boldsymbol g_t.
+$$
 
 The three coordinates of this real update come from one physical outcome; they are not simultaneous measurements of three Pauli observables.
+
 
 ## Output and guarantee
 
@@ -78,7 +89,7 @@ $$
 =\frac{I+r\widehat{\boldsymbol n}_T\cdot\boldsymbol\sigma}{2}.
 $$
 
-For squared fidelity $`F(\rho,\sigma)=\|\sqrt\rho\sqrt\sigma\|_1^2`$, every fixed direction satisfies
+For squared fidelity $`F(\rho,\sigma)=\Vert \sqrt\rho\sqrt\sigma\Vert _1^2`$, every fixed direction satisfies
 
 $$
 \mathbb E_{\boldsymbol n}

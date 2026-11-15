@@ -6,7 +6,7 @@ For independent qubits with a known Bloch radius $`1/2\le r\le1`$ and an unknown
 
 $$
 D_{\min}(T,r,\epsilon)
-=\Theta\!\left(\log(1+T)+\sqrt{\kappa T}+\frac\kappa\epsilon\right),
+=\Theta\left(\log(1+T)+\sqrt{\kappa T}+\frac\kappa\epsilon\right),
 \qquad \kappa=1-r^2.
 $$
 
@@ -24,6 +24,10 @@ At final accuracy $`\epsilon=A/T`$ with fixed sufficiently large $`A`$, the cost
 ## Read the account
 
 Start with the [scientific route](science/README.md), or read the [physical interpretation](science/interpretation.md) before the proofs. The [model](science/model.md) distinguishes nonselective disturbance, excess conditional disturbance and directed reward regret. The [related-work comparison](references/related_work.md) identifies inherited results and the surviving contribution; [bibliography](references/bibliography.bib) gives publication and version metadata.
+
+## Learn the result
+
+The selected educational anchor is John Watrous, *The Theory of Quantum Information* (2018), using the author's standard-layout manuscript. Begin with the [source-to-project bridge](learning/watrous_bridge.md) and follow the [30-milestone map](learning/milestones.md), or use the [learning entrypoint](learning/README.md) to choose a reading route. The bridge distinguishes Watrous's root fidelity from the squared fidelity used here.
 
 ## Reproduce the finite checks
 
