@@ -4,7 +4,7 @@
 
 ## Uniform order theorem
 
-There are universal positive constants $`c,C,C_0,\epsilon_0`$ such that, for every known radius $`1/2\le r\le1`$, every integer $`T`$, and every $`C_0/T\le\epsilon\le\epsilon_0`$,
+There are universal positive constants $`c,C,C_0,\epsilon_0`$ such that, for every known radius $`1/2\le r\le1`$, every integer $`T\ge1`$, and every $`C_0/T\le\epsilon\le\epsilon_0`$,
 
 $$
 c\left[\log(1+T)+\sqrt{\kappa T}+\frac\kappa\epsilon\right]
