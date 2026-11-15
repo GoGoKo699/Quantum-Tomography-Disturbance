@@ -49,6 +49,12 @@ jobs:
           node verification/hosted_math/capture_hosted_math.cjs \
             --root "$GITHUB_WORKSPACE" --repository "$GITHUB_REPOSITORY" \
             --revision "$CAPTURE_REVISION" --output "$RUNNER_TEMP/hosted-math"
+      - name: Diagnose the pinned upper-bound page after capture failure
+        if: failure()
+        continue-on-error: true
+        run: |
+          export NODE_PATH="$RUNNER_TEMP/math-runtime/node_modules"
+          node verification/hosted_math/diagnose_upper.cjs
       - name: Retain the actual captures and source comparison
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
@@ -57,5 +63,6 @@ jobs:
           path: |
             ${{ runner.temp }}/hosted-math
             ${{ runner.temp }}/hosted-probe
+            ${{ runner.temp }}/hosted-diagnostic
           if-no-files-found: error
           retention-days: 14

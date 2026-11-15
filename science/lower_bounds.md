@@ -35,7 +35,7 @@ They satisfy, uniformly in all parameters,
 
 $$
 \frac12d_r(n,a)\le\delta_r(n,a)\le d_r(n,a).
-\tag{1}
+\qquad\text{(1)}
 $$
 
 Both losses depend on the measurement axis, so replacing $`a`$ by $`-a`$ changes neither. For a policy $`\pi`$, define
@@ -53,7 +53,7 @@ $$
 L_r(n,\widehat n)
 =1-F(\rho_{r,n},\rho_{r,\widehat n})
 =\frac{r^2}{4}\Vert n-\widehat n\Vert _2^2.
-\tag{2}
+\qquad\text{(2)}
 $$
 
 Let $`\mathcal P(T,r,\epsilon)`$ contain all such policies with
@@ -71,7 +71,7 @@ D_{\mathrm{opt}}(T,r,\epsilon)
 \ge c\left[
 \log(1+T)+\sqrt{\kappa T}+\frac\kappa\epsilon
 \right].
-\tag{3}
+\qquad\text{(3)}
 $$
 
 The last term is zero at $`\kappa=0`$. In particular, (3) holds throughout the constant-factor feasible regime $`C_0/T\le\epsilon\le\epsilon_0`$ used for the matching upper bound, for sufficiently large universal $`C_0`$ and fixed positive $`\epsilon_0`$. The lower bound does not assert the exact smallest feasible constant multiplying $`1/T`$.
@@ -95,7 +95,7 @@ $$
 =\frac u2 
 \frac{\sqrt{\kappa+u}}
 {\sqrt{\kappa+u}+\sqrt\kappa}.
-\tag{4}
+\qquad\text{(4)}
 $$
 
 The fraction lies between $`1/2`$ and $`1`$, proving (1). If $`\kappa=u=0`$, the value is defined by the first expression in (4) and equals zero. Thus the inequality also covers pure states and exactly aligned or anti-aligned axes.
@@ -106,7 +106,7 @@ $$
 \mathbb E_{B\mid a}\left[1-F(\rho_{r,n},\rho_{\mathrm{out},B})\right]
 =\frac{1-r^2z^2}{2}
 =\frac\kappa2+d_r(n,a).
-\tag{5}
+\qquad\text{(5)}
 $$
 
 Hence $`d_r`$ is the excess conditional infidelity above the eigenbasis floor. The nonselective loss $`\delta_r`$ itself has zero eigenbasis baseline. The total conditional loss includes $`\kappa T/2`$ and is a different objective.
@@ -127,7 +127,7 @@ $$
 w(\theta)=\frac1\alpha
 \cos^2\left(\frac{\pi\theta}{2\alpha}\right)
 \mathbf 1_{[-\alpha,\alpha]}(\theta).
-\tag{6}
+\qquad\text{(6)}
 $$
 
 It integrates to one, vanishes at both endpoints and has prior Fisher information
@@ -136,7 +136,7 @@ $$
 J_0=\int_{-\alpha}^{\alpha}
 \frac{w'(\theta)^2}{w(\theta)} d\theta
 =\frac{\pi^2}{\alpha^2}=64.
-\tag{7}
+\qquad\text{(7)}
 $$
 
 For an experiment $`H`$ with Fisher information $`I_{\theta}(H)`$, any real estimator $`Z=Z(H)`$ and differentiable scalar target $`\psi`$ satisfy the functional van Trees inequality
@@ -148,7 +148,7 @@ $$
 \frac{
 \left(\mathbb E_w\psi'(\theta)\right)^2
 }{J_0+\mathbb E_w I_{\theta}(H)}.
-\tag{8}
+\qquad\text{(8)}
 $$
 
 Here and below $`\mathbb E_w`$ averages over the prior. No unbiasedness condition is imposed. For completeness, let $`q_{\theta}(h)`$ be the likelihood and let $`S=\partial_{\theta}\log(w(\theta)q_{\theta}(h))`$ be the joint score. Integration by parts, using the zero boundary values of $`w`$, yields
@@ -170,7 +170,7 @@ $$
 I_{\theta}(a)
 =\frac{r^2(a\cdot n'(\theta))^2}
 {1-r^2(n(\theta)\cdot a)^2}.
-\tag{9}
+\qquad\text{(9)}
 $$
 
 Since $`n'(\theta)`$ is a unit tangent vector,
@@ -186,7 +186,7 @@ $$
 I_{\theta}(a)
 \le\frac{2d_r(n(\theta),a)}\kappa
 \le\frac{4\delta_r(n(\theta),a)}\kappa.
-\tag{10}
+\qquad\text{(10)}
 $$
 
 This bound holds for every chosen axis, including axes anti-aligned with $`n`$.
@@ -203,7 +203,7 @@ $$
 I_{\theta}(H_t)
 =\mathbb E_{\theta}^{\pi}
 \sum_{s=1}^t I_{\theta}(a_s).
-\tag{11}
+\qquad\text{(11)}
 $$
 
 One may equivalently include an independent random seed in the record. Conditioning on that seed and then averaging gives the same identity. For fixed positive $`\kappa`$ all outcome probabilities are strictly positive, and the finite-horizon differentiation and integration are regular. The pure endpoint is handled separately below.
@@ -220,7 +220,7 @@ Equations (10)–(11) imply the information budget
 $$
 \mathbb E_w I_{\theta}(H_t)
 \le\frac{4\mathcal D_t}\kappa.
-\tag{12}
+\qquad\text{(12)}
 $$
 
 The same bound applies after appending a newly chosen axis $`a_{t+1}`$ but before observing its outcome: that choice is a parameter-independent randomized function of the existing history.
@@ -242,7 +242,7 @@ $$
 \left[((\widehat n_T)_x-\sin\theta)^2\right]
 \ge
 \frac{\cos^2\alpha}{J_0+4\mathcal D_T/\kappa}.
-\tag{13}
+\qquad\text{(13)}
 $$
 
 The uniform final fidelity guarantee and (2) imply that the left side is at most $`4\epsilon/r^2`$. Rearranging proves
@@ -252,14 +252,14 @@ M_T^{\pi}\ge\mathcal D_T
 \ge
 \frac{\kappa r^2\cos^2\alpha}{16\epsilon}
 -\frac{\kappa J_0}{4}.
-\tag{14}
+\qquad\text{(14)}
 $$
 
 In particular, because $`r\ge1/2`$ and $`\cos^2\alpha\ge1/2`$,
 
 $$
 M_T^{\pi}\ge\frac{\kappa}{128\epsilon}-16\kappa.
-\tag{15}
+\qquad\text{(15)}
 $$
 
 This is a global minimax implication of a fixed-prior bound. It does not assume that the final estimator is locally unbiased, nor that the unknown direction converges to one selected point as the horizon grows.
@@ -283,7 +283,7 @@ $$
 &=\frac{4d_r(n(\theta),a_t)}{r^2}
 \le\frac{8\delta_r(n(\theta),a_t)}{r^2}.
 \end{aligned}
-\tag{16}
+\qquad\text{(16)}
 $$
 
 The estimator $`Z_t`$ is determined before the $`t`$th sign is observed. Apply (8) to the previous history with its newly selected axis, and then use (12) and (16). The expected increment of Bayes disturbance obeys
@@ -293,7 +293,7 @@ $$
 \ge
 \frac{r^2\cos^2(2\alpha)}
 {8\left(J_0+4\mathcal D_{t-1}/\kappa\right)}.
-\tag{17}
+\qquad\text{(17)}
 $$
 
 Put $`c_{\star}=r^2\cos^2(2\alpha)/8\ge1/64`$. Disturbance is nonnegative, so $`\mathcal D_{t-1}\le\mathcal D_T`$. Summing (17) yields
@@ -304,7 +304,7 @@ $$
 \qquad
 4\mathcal D_T^2+\kappa J_0\mathcal D_T
 \ge c_{\star}\kappa T.
-\tag{18}
+\qquad\text{(18)}
 $$
 
 Solving this quadratic inequality gives the explicit bound
@@ -316,7 +316,7 @@ M_T^{\pi}\ge\mathcal D_T
 \frac{\sqrt{\kappa^2J_0^2+16c_{\star}\kappa T}-\kappa J_0}{8}\\
 &\ge\frac1{16}\sqrt{\kappa T}-8\kappa.
 \end{aligned}
-\tag{19}
+\qquad\text{(19)}
 $$
 
 The last display keeps the finite startup term visible. The logarithmic bound below absorbs that term uniformly, including the regime where $`\kappa T`$ is small.
@@ -332,7 +332,7 @@ $$
 =\frac{\Pi_m}{m+1},
 \qquad
 Q_{m,a}=\int(n\cdot a)^2P_n^{\otimes m} d\mu(n),
-\tag{20}
+\qquad\text{(20)}
 $$
 
 where $`\Pi_m`$ projects onto the symmetric subspace. For $`m=0`$ these are scalar operators.
@@ -345,7 +345,7 @@ $$
 &=1-\frac{4(k+1)(m-k+1)}{(m+2)(m+3)}\\
 &=\frac{4(k-m/2)^2+m+2}{(m+2)(m+3)}.
 \end{aligned}
-\tag{21}
+\qquad\text{(21)}
 $$
 
 Its maximum occurs at $`k=0,m`$ and equals
@@ -360,7 +360,7 @@ Hence, for every axis,
 
 $$
 Q_{m,a}\le\beta_m\Omega_m.
-\tag{22}
+\qquad\text{(22)}
 $$
 
 Consider any procedure that obtains an axis from $`m`$ pure copies, allowing even an arbitrary collective measurement of those copies. Fold its classical randomization into an axis-valued POVM $`M_m(da)`$. Equation (22) implies
@@ -372,7 +372,7 @@ $$
 &\le\beta_m\int\mathrm{Tr}\left(\Omega_mM_m(da)\right)
 =\beta_m.
 \end{aligned}
-\tag{23}
+\qquad\text{(23)}
 $$
 
 This argument directly handles random axes and arbitrary outcome spaces; it does not require conditioning on an individual history of positive probability.
@@ -383,7 +383,7 @@ $$
 \rho_{r,n}=\mathcal E_r(P_n),
 \qquad
 \mathcal E_r(X)=rX+(1-r)\mathrm{Tr}(X)\frac I2.
-\tag{24}
+\qquad\text{(24)}
 $$
 
 Any policy history obtained from $`m`$ mixed copies can therefore be produced by a POVM on $`m`$ pure copies, by composing its measurement with $`\mathcal E_r^{\otimes m}`$. Thus (23) also bounds the axis selected by the mixed-source policy. This is a relaxation used only to prove the logarithmic lower bound; it does not extend the Fisher bounds to a different measurement model.
@@ -394,7 +394,7 @@ $$
 \mathbb E_{\mu}\mathbb E\delta_r(n,a_t)
 \ge\frac{r^2}{4}(1-\beta_{t-1})
 =\frac{r^2t}{(t+1)(t+2)}.
-\tag{25}
+\qquad\text{(25)}
 $$
 
 Consequently every policy, whether or not it satisfies a terminal accuracy constraint, obeys
@@ -406,7 +406,7 @@ M_T^{\pi}
 &=r^2\left(H_{T+1}+\frac2{T+2}-2\right)\\
 &\ge\frac1{24}\log(1+T).
 \end{aligned}
-\tag{26}
+\qquad\text{(26)}
 $$
 
 For the last inequality, $`t/[(t+1)(t+2)]\ge1/(6t)`$ for $`t\ge1`$, $`H_T\ge\log(1+T)`$, and $`r^2\ge1/4`$.
@@ -423,7 +423,7 @@ M_T^{\pi}\ge c_1\log(1+T),
 M_T^{\pi}\ge c_2\sqrt{\kappa T}-C_2\kappa,
 \qquad
 M_T^{\pi}\ge c_3\frac\kappa\epsilon-C_3\kappa.
-\tag{27}
+\qquad\text{(27)}
 $$
 
 Because $`0\le\kappa\le3/4`$ and $`\log(1+T)\ge\log2`$, the startup terms are bounded by a universal multiple of the first lower bound. Thus each of $`\log(1+T)`$, $`\sqrt{\kappa T}`$ and $`\kappa/\epsilon`$ is at most a universal multiple of $`M_T^{\pi}`$. Their sum is as well. This proves (3), and taking the infimum over the accuracy-constrained policy class preserves it. At $`\kappa=0`$, (26) alone proves the required conclusion.
@@ -442,7 +442,7 @@ $$
 \sup_n\mathbb E_n L_r(n,\widehat n_T)
 \ge\frac{r^2}{T+2}
 \ge\frac1{4(T+2)}.
-\tag{28}
+\qquad\text{(28)}
 $$
 
 Thus precision below a constant multiple of $`1/T`$ is impossible in this model. The matching upper construction works above a sufficiently large constant multiple. Neither statement identifies the exact feasibility constant between them.
