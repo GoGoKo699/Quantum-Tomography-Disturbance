@@ -1,0 +1,772 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "seed": 20261115053041,
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "scope": "Selected finite identities, exact rational integrals, finite adaptive histories, a finite recursion grid and optional Monte Carlo. Not a general proof or priority certificate.",
+  "checks": {
+    "centered_conditional_moments": {
+      "cases": 420,
+      "outcomes_per_case": 8,
+      "mean_max_absolute_residual": 2.898575565094766e-13,
+      "variance_max_relative_residual": 4.2383463911924534e-10,
+      "probability_max_residual": 2.220446049250313e-16
+    },
+    "physical_disturbance": {
+      "cases": 360,
+      "matrix_disturbance_max_residual": 1.540843747038778e-08,
+      "matrix_conditional_loss_max_residual": 2.356062865359771e-08,
+      "matrix_same_radius_loss_max_residual": 9.38630501101656e-09,
+      "axis_sign_matrix_max_residual": 0.0,
+      "observed_closed_proxy_ratio_min": 0.5003399426964552,
+      "observed_closed_proxy_ratio_max": 1.0,
+      "matrix_tolerance": 8e-08
+    },
+    "fisher_information": {
+      "single_action_cases": 800,
+      "finite_difference_max_residual": 1.2380341196660538e-10,
+      "maximum_information_over_proxy_budget": 0.9797756726428063,
+      "maximum_information_over_physical_budget": 0.9773821026398033,
+      "adaptive_trees": [
+        {
+          "theta": -0.3,
+          "r": 0.5,
+          "histories": 64,
+          "joint_information": 0.7464630942766868,
+          "sum_conditional_information": 0.7464630942766866,
+          "expected_physical_disturbance": 0.19505960198200223
+        },
+        {
+          "theta": -0.3,
+          "r": 0.9,
+          "histories": 64,
+          "joint_information": 3.7375748120315473,
+          "sum_conditional_information": 3.737574812031546,
+          "expected_physical_disturbance": 0.8867545160859193
+        },
+        {
+          "theta": -0.3,
+          "r": 0.999,
+          "histories": 64,
+          "joint_information": 5.351881075972171,
+          "sum_conditional_information": 5.351881075972172,
+          "expected_physical_disturbance": 1.6259535974467183
+        },
+        {
+          "theta": 0.0,
+          "r": 0.5,
+          "histories": 64,
+          "joint_information": 0.3762783976948011,
+          "sum_conditional_information": 0.3762783976948011,
+          "expected_physical_disturbance": 0.10239780739260904
+        },
+        {
+          "theta": 0.0,
+          "r": 0.9,
+          "histories": 64,
+          "joint_information": 2.767215863667946,
+          "sum_conditional_information": 2.7672158636679445,
+          "expected_physical_disturbance": 0.4858981645643578
+        },
+        {
+          "theta": 0.0,
+          "r": 0.999,
+          "histories": 64,
+          "joint_information": 4.847083706247688,
+          "sum_conditional_information": 4.847083706247688,
+          "expected_physical_disturbance": 0.9498200852504921
+        },
+        {
+          "theta": 0.27,
+          "r": 0.5,
+          "histories": 64,
+          "joint_information": 0.11986911097483671,
+          "sum_conditional_information": 0.11986911097483666,
+          "expected_physical_disturbance": 0.0459046610562406
+        },
+        {
+          "theta": 0.27,
+          "r": 0.9,
+          "histories": 64,
+          "joint_information": 1.4160542890243621,
+          "sum_conditional_information": 1.4160542890243626,
+          "expected_physical_disturbance": 0.2133898516096407
+        },
+        {
+          "theta": 0.27,
+          "r": 0.999,
+          "histories": 64,
+          "joint_information": 3.4797768319705424,
+          "sum_conditional_information": 3.4797768319705424,
+          "expected_physical_disturbance": 0.44357278532374955
+        }
+      ],
+      "adaptive_rounds": 6
+    },
+    "haar_axis_prediction": {
+      "matrix_levels": [
+        {
+          "previous_pure_copies": 0,
+          "eigenspace_dimension": 1,
+          "maximum_quadratic_posterior": 0.333333333333333,
+          "minimum_axis_sine_squared": "2/3"
+        },
+        {
+          "previous_pure_copies": 1,
+          "eigenspace_dimension": 2,
+          "maximum_quadratic_posterior": 0.33333333333333326,
+          "minimum_axis_sine_squared": "2/3"
+        },
+        {
+          "previous_pure_copies": 2,
+          "eigenspace_dimension": 3,
+          "maximum_quadratic_posterior": 0.4000000000000005,
+          "minimum_axis_sine_squared": "3/5"
+        },
+        {
+          "previous_pure_copies": 3,
+          "eigenspace_dimension": 4,
+          "maximum_quadratic_posterior": 0.4666666666666668,
+          "minimum_axis_sine_squared": "8/15"
+        },
+        {
+          "previous_pure_copies": 4,
+          "eigenspace_dimension": 5,
+          "maximum_quadratic_posterior": 0.5238095238095255,
+          "minimum_axis_sine_squared": "10/21"
+        },
+        {
+          "previous_pure_copies": 5,
+          "eigenspace_dimension": 6,
+          "maximum_quadratic_posterior": 0.571428571428571,
+          "minimum_axis_sine_squared": "3/7"
+        },
+        {
+          "previous_pure_copies": 6,
+          "eigenspace_dimension": 7,
+          "maximum_quadratic_posterior": 0.6111111111111116,
+          "minimum_axis_sine_squared": "7/18"
+        },
+        {
+          "previous_pure_copies": 7,
+          "eigenspace_dimension": 8,
+          "maximum_quadratic_posterior": 0.6444444444444452,
+          "minimum_axis_sine_squared": "16/45"
+        }
+      ],
+      "exact_rational_beta_cases": 36,
+      "matrix_quadrature_max_residual": 2.0145828660478593e-15,
+      "averaged_state_max_residual": 7.896818790640167e-16,
+      "quadrature": "Gauss-Legendre in |psi_0|^2 and uniform phase; full tensor matrices through m=7"
+    },
+    "recursive_bound": {
+      "cases": [
+        {
+          "nu": 0.0,
+          "q": 0.0,
+          "horizon": 129,
+          "final_propagated_bound": 0.08873014315950797,
+          "maximum_ratio_to_base_envelope": 0.2100000000000001,
+          "maximum_ratio_to_floor_envelope": null
+        },
+        {
+          "nu": 0.0,
+          "q": 0.0,
+          "horizon": 4096,
+          "final_propagated_bound": 0.0013995942265148302,
+          "maximum_ratio_to_base_envelope": 0.2100000000000001,
+          "maximum_ratio_to_floor_envelope": null
+        },
+        {
+          "nu": 0.0,
+          "q": 0.0,
+          "horizon": 65536,
+          "final_propagated_bound": 8.212104069155474e-05,
+          "maximum_ratio_to_base_envelope": 0.2100000000000001,
+          "maximum_ratio_to_floor_envelope": null
+        },
+        {
+          "nu": 0.0,
+          "q": 1e-06,
+          "horizon": 129,
+          "final_propagated_bound": 0.08873014304569267,
+          "maximum_ratio_to_base_envelope": 0.2100000000000001,
+          "maximum_ratio_to_floor_envelope": 0.21000000000000008
+        },
+        {
+          "nu": 0.0,
+          "q": 1e-06,
+          "horizon": 4096,
+          "final_propagated_bound": 0.0013995812182091448,
+          "maximum_ratio_to_base_envelope": 0.2100000000000001,
+          "maximum_ratio_to_floor_envelope": 0.21000000000000008
+        },
+        {
+          "nu": 0.0,
+          "q": 1e-06,
+          "horizon": 65536,
+          "final_propagated_bound": 8.210897813099247e-05,
+          "maximum_ratio_to_base_envelope": 0.2100000000000001,
+          "maximum_ratio_to_floor_envelope": 0.21000000000000008
+        },
+        {
+          "nu": 0.0,
+          "q": 0.1,
+          "horizon": 129,
+          "final_propagated_bound": 0.0887297196531965,
+          "maximum_ratio_to_base_envelope": 0.2100000000000001,
+          "maximum_ratio_to_floor_envelope": 0.21000000000000008
+        },
+        {
+          "nu": 0.0,
+          "q": 0.1,
+          "horizon": 4096,
+          "final_propagated_bound": 0.0011645083601463544,
+          "maximum_ratio_to_base_envelope": 0.2100000000000001,
+          "maximum_ratio_to_floor_envelope": 0.21000000000000008
+        },
+        {
+          "nu": 0.0,
+          "q": 0.1,
+          "horizon": 65536,
+          "final_propagated_bound": 6.379448163074321e-05,
+          "maximum_ratio_to_base_envelope": 0.2100000000000001,
+          "maximum_ratio_to_floor_envelope": 0.21000000000000008
+        },
+        {
+          "nu": 1e-12,
+          "q": 0.0,
+          "horizon": 129,
+          "final_propagated_bound": 0.08873014251830164,
+          "maximum_ratio_to_base_envelope": 0.20999979000031002,
+          "maximum_ratio_to_floor_envelope": null
+        },
+        {
+          "nu": 1e-12,
+          "q": 0.0,
+          "horizon": 4096,
+          "final_propagated_bound": 0.0013995760192570144,
+          "maximum_ratio_to_base_envelope": 0.20999979000031002,
+          "maximum_ratio_to_floor_envelope": null
+        },
+        {
+          "nu": 1e-12,
+          "q": 0.0,
+          "horizon": 65536,
+          "final_propagated_bound": 8.21168007764239e-05,
+          "maximum_ratio_to_base_envelope": 0.20999979000031002,
+          "maximum_ratio_to_floor_envelope": null
+        },
+        {
+          "nu": 1e-12,
+          "q": 1e-06,
+          "horizon": 129,
+          "final_propagated_bound": 0.08873014240449958,
+          "maximum_ratio_to_base_envelope": 0.20999979000031002,
+          "maximum_ratio_to_floor_envelope": 0.20999979000031013
+        },
+        {
+          "nu": 1e-12,
+          "q": 1e-06,
+          "horizon": 4096,
+          "final_propagated_bound": 0.0013995630124931696,
+          "maximum_ratio_to_base_envelope": 0.20999979000031002,
+          "maximum_ratio_to_floor_envelope": 0.20999979000031013
+        },
+        {
+          "nu": 1e-12,
+          "q": 1e-06,
+          "horizon": 65536,
+          "final_propagated_bound": 8.210474384372544e-05,
+          "maximum_ratio_to_base_envelope": 0.20999979000031002,
+          "maximum_ratio_to_floor_envelope": 0.20999979000031013
+        },
+        {
+          "nu": 1e-12,
+          "q": 0.1,
+          "horizon": 129,
+          "final_propagated_bound": 0.0887297196532957,
+          "maximum_ratio_to_base_envelope": 0.20999979000031002,
+          "maximum_ratio_to_floor_envelope": 0.2099999999980001
+        },
+        {
+          "nu": 1e-12,
+          "q": 0.1,
+          "horizon": 4096,
+          "final_propagated_bound": 0.0011645077339986606,
+          "maximum_ratio_to_base_envelope": 0.20999979000031002,
+          "maximum_ratio_to_floor_envelope": 0.2099999999980001
+        },
+        {
+          "nu": 1e-12,
+          "q": 0.1,
+          "horizon": 65536,
+          "final_propagated_bound": 6.379448407618973e-05,
+          "maximum_ratio_to_base_envelope": 0.20999979000031002,
+          "maximum_ratio_to_floor_envelope": 0.2099999999980001
+        },
+        {
+          "nu": 1e-06,
+          "q": 0.0,
+          "horizon": 129,
+          "final_propagated_bound": 0.088729818836902,
+          "maximum_ratio_to_base_envelope": 0.2097903096903097,
+          "maximum_ratio_to_floor_envelope": null
+        },
+        {
+          "nu": 1e-06,
+          "q": 0.0,
+          "horizon": 4096,
+          "final_propagated_bound": 0.0013823900933084402,
+          "maximum_ratio_to_base_envelope": 0.2097903096903097,
+          "maximum_ratio_to_floor_envelope": null
+        },
+        {
+          "nu": 1e-06,
+          "q": 0.0,
+          "horizon": 65536,
+          "final_propagated_bound": 7.866805658424067e-05,
+          "maximum_ratio_to_base_envelope": 0.2097903096903097,
+          "maximum_ratio_to_floor_envelope": null
+        },
+        {
+          "nu": 1e-06,
+          "q": 1e-06,
+          "horizon": 129,
+          "final_propagated_bound": 0.088729818836902,
+          "maximum_ratio_to_base_envelope": 0.2097903096903097,
+          "maximum_ratio_to_floor_envelope": 0.10500005000000005
+        },
+        {
+          "nu": 1e-06,
+          "q": 1e-06,
+          "horizon": 4096,
+          "final_propagated_bound": 0.0013823784992764983,
+          "maximum_ratio_to_base_envelope": 0.2097903096903097,
+          "maximum_ratio_to_floor_envelope": 0.10500005000000005
+        },
+        {
+          "nu": 1e-06,
+          "q": 1e-06,
+          "horizon": 65536,
+          "final_propagated_bound": 7.866009651524654e-05,
+          "maximum_ratio_to_base_envelope": 0.2097903096903097,
+          "maximum_ratio_to_floor_envelope": 0.10500005000000005
+        },
+        {
+          "nu": 1e-06,
+          "q": 0.1,
+          "horizon": 129,
+          "final_propagated_bound": 0.088729818836902,
+          "maximum_ratio_to_base_envelope": 0.2097903096903097,
+          "maximum_ratio_to_floor_envelope": 0.2099980000199999
+        },
+        {
+          "nu": 1e-06,
+          "q": 0.1,
+          "horizon": 4096,
+          "final_propagated_bound": 0.001163907315497562,
+          "maximum_ratio_to_base_envelope": 0.2097903096903097,
+          "maximum_ratio_to_floor_envelope": 0.2099980000199999
+        },
+        {
+          "nu": 1e-06,
+          "q": 0.1,
+          "horizon": 65536,
+          "final_propagated_bound": 6.379761686222334e-05,
+          "maximum_ratio_to_base_envelope": 0.2097903096903097,
+          "maximum_ratio_to_floor_envelope": 0.2099980000199999
+        },
+        {
+          "nu": 0.001,
+          "q": 0.0,
+          "horizon": 129,
+          "final_propagated_bound": 0.08882890335870283,
+          "maximum_ratio_to_base_envelope": 0.20365971435033658,
+          "maximum_ratio_to_floor_envelope": null
+        },
+        {
+          "nu": 0.001,
+          "q": 0.0,
+          "horizon": 4096,
+          "final_propagated_bound": 0.0012094846119666133,
+          "maximum_ratio_to_base_envelope": 0.20365971435033658,
+          "maximum_ratio_to_floor_envelope": null
+        },
+        {
+          "nu": 0.001,
+          "q": 0.0,
+          "horizon": 65536,
+          "final_propagated_bound": 6.910899217756876e-05,
+          "maximum_ratio_to_base_envelope": 0.20365971435033658,
+          "maximum_ratio_to_floor_envelope": null
+        },
+        {
+          "nu": 0.001,
+          "q": 1e-06,
+          "horizon": 129,
+          "final_propagated_bound": 0.08882890335870283,
+          "maximum_ratio_to_base_envelope": 0.20365971435033658,
+          "maximum_ratio_to_floor_envelope": 0.00020989010989011
+        },
+        {
+          "nu": 0.001,
+          "q": 1e-06,
+          "horizon": 4096,
+          "final_propagated_bound": 0.0012094830067118792,
+          "maximum_ratio_to_base_envelope": 0.20365971435033658,
+          "maximum_ratio_to_floor_envelope": 0.00020989010989011
+        },
+        {
+          "nu": 0.001,
+          "q": 1e-06,
+          "horizon": 65536,
+          "final_propagated_bound": 6.910844885319764e-05,
+          "maximum_ratio_to_base_envelope": 0.20365971435033658,
+          "maximum_ratio_to_floor_envelope": 0.00020989010989011
+        },
+        {
+          "nu": 0.001,
+          "q": 0.1,
+          "horizon": 129,
+          "final_propagated_bound": 0.08882890335870283,
+          "maximum_ratio_to_base_envelope": 0.20365971435033658,
+          "maximum_ratio_to_floor_envelope": 0.20801980198019812
+        },
+        {
+          "nu": 0.001,
+          "q": 0.1,
+          "horizon": 4096,
+          "final_propagated_bound": 0.0011631846778291874,
+          "maximum_ratio_to_base_envelope": 0.20365971435033658,
+          "maximum_ratio_to_floor_envelope": 0.20801980198019812
+        },
+        {
+          "nu": 0.001,
+          "q": 0.1,
+          "horizon": 65536,
+          "final_propagated_bound": 6.447553118357484e-05,
+          "maximum_ratio_to_base_envelope": 0.20365971435033658,
+          "maximum_ratio_to_floor_envelope": 0.20801980198019812
+        },
+        {
+          "nu": 0.1,
+          "q": 0.0,
+          "horizon": 129,
+          "final_propagated_bound": 0.09864809020382172,
+          "maximum_ratio_to_base_envelope": 0.16714432386255074,
+          "maximum_ratio_to_floor_envelope": null
+        },
+        {
+          "nu": 0.1,
+          "q": 0.0,
+          "horizon": 4096,
+          "final_propagated_bound": 0.0015271797279997922,
+          "maximum_ratio_to_base_envelope": 0.16714432386255074,
+          "maximum_ratio_to_floor_envelope": null
+        },
+        {
+          "nu": 0.1,
+          "q": 0.0,
+          "horizon": 65536,
+          "final_propagated_bound": 0.00011721353822432236,
+          "maximum_ratio_to_base_envelope": 0.16714432386255074,
+          "maximum_ratio_to_floor_envelope": null
+        },
+        {
+          "nu": 0.1,
+          "q": 1e-06,
+          "horizon": 129,
+          "final_propagated_bound": 0.09864809020382172,
+          "maximum_ratio_to_base_envelope": 0.16714432386255074,
+          "maximum_ratio_to_floor_envelope": 2.1999780002199985e-06
+        },
+        {
+          "nu": 0.1,
+          "q": 1e-06,
+          "horizon": 4096,
+          "final_propagated_bound": 0.0015271797642783709,
+          "maximum_ratio_to_base_envelope": 0.16714432386255074,
+          "maximum_ratio_to_floor_envelope": 2.1999780002199985e-06
+        },
+        {
+          "nu": 0.1,
+          "q": 1e-06,
+          "horizon": 65536,
+          "final_propagated_bound": 0.00011721308400807295,
+          "maximum_ratio_to_base_envelope": 0.16714432386255074,
+          "maximum_ratio_to_floor_envelope": 2.1999780002199985e-06
+        },
+        {
+          "nu": 0.1,
+          "q": 0.1,
+          "horizon": 129,
+          "final_propagated_bound": 0.09864809020382172,
+          "maximum_ratio_to_base_envelope": 0.16714432386255074,
+          "maximum_ratio_to_floor_envelope": 0.11000000000000006
+        },
+        {
+          "nu": 0.1,
+          "q": 0.1,
+          "horizon": 4096,
+          "final_propagated_bound": 0.001537836558820341,
+          "maximum_ratio_to_base_envelope": 0.16714432386255074,
+          "maximum_ratio_to_floor_envelope": 0.11000000000000006
+        },
+        {
+          "nu": 0.1,
+          "q": 0.1,
+          "horizon": 65536,
+          "final_propagated_bound": 9.561729866434105e-05,
+          "maximum_ratio_to_base_envelope": 0.16714432386255074,
+          "maximum_ratio_to_floor_envelope": 0.11000000000000006
+        },
+        {
+          "nu": 3.0,
+          "q": 0.0,
+          "horizon": 129,
+          "final_propagated_bound": 0.3648260140001789,
+          "maximum_ratio_to_base_envelope": 0.18667295593006372,
+          "maximum_ratio_to_floor_envelope": null
+        },
+        {
+          "nu": 3.0,
+          "q": 0.0,
+          "horizon": 4096,
+          "final_propagated_bound": 0.008768787359469772,
+          "maximum_ratio_to_base_envelope": 0.18667295593006372,
+          "maximum_ratio_to_floor_envelope": null
+        },
+        {
+          "nu": 3.0,
+          "q": 0.0,
+          "horizon": 65536,
+          "final_propagated_bound": 0.000540370887591681,
+          "maximum_ratio_to_base_envelope": 0.18667295593006372,
+          "maximum_ratio_to_floor_envelope": null
+        },
+        {
+          "nu": 3.0,
+          "q": 1e-06,
+          "horizon": 129,
+          "final_propagated_bound": 0.3648260140001789,
+          "maximum_ratio_to_base_envelope": 0.18667295593006372,
+          "maximum_ratio_to_floor_envelope": 1.6999994333335232e-07
+        },
+        {
+          "nu": 3.0,
+          "q": 1e-06,
+          "horizon": 4096,
+          "final_propagated_bound": 0.008768787359469772,
+          "maximum_ratio_to_base_envelope": 0.18667295593006372,
+          "maximum_ratio_to_floor_envelope": 1.6999994333335232e-07
+        },
+        {
+          "nu": 3.0,
+          "q": 1e-06,
+          "horizon": 65536,
+          "final_propagated_bound": 0.0005403707302724549,
+          "maximum_ratio_to_base_envelope": 0.18667295593006372,
+          "maximum_ratio_to_floor_envelope": 1.6999994333335232e-07
+        },
+        {
+          "nu": 3.0,
+          "q": 0.1,
+          "horizon": 129,
+          "final_propagated_bound": 0.3648260140001789,
+          "maximum_ratio_to_base_envelope": 0.18667295593006372,
+          "maximum_ratio_to_floor_envelope": 0.016451612903225818
+        },
+        {
+          "nu": 3.0,
+          "q": 0.1,
+          "horizon": 4096,
+          "final_propagated_bound": 0.008768787359469772,
+          "maximum_ratio_to_base_envelope": 0.18667295593006372,
+          "maximum_ratio_to_floor_envelope": 0.016451612903225818
+        },
+        {
+          "nu": 3.0,
+          "q": 0.1,
+          "horizon": 65536,
+          "final_propagated_bound": 0.0005352972094358583,
+          "maximum_ratio_to_base_envelope": 0.18667295593006372,
+          "maximum_ratio_to_floor_envelope": 0.016451612903225818
+        }
+      ],
+      "parameter_cases": 54,
+      "maximum_ratio_to_base_envelope": 0.2100000000000001,
+      "maximum_ratio_to_floor_envelope": 0.21000000000000008,
+      "limitation": "Finite grid and finite times only; the proof of induction for every parameter is analytical."
+    },
+    "monte_carlo_stress": {
+      "replications_per_case": 192,
+      "cases": [
+        {
+          "kappa": 0.0,
+          "q": 0.0,
+          "horizon": 256,
+          "mean_terminal_infidelity": 0.004666788291220215,
+          "terminal_infidelity_standard_error": 0.0003169662867647764,
+          "mean_cumulative_physical_disturbance": 57.37845108021279,
+          "cumulative_disturbance_standard_error": 0.16718975775677,
+          "mean_unnormalized_vector_mse": 0.020913143911057128
+        },
+        {
+          "kappa": 0.0,
+          "q": 0.0,
+          "horizon": 4096,
+          "mean_terminal_infidelity": 0.0002667764111566946,
+          "terminal_infidelity_standard_error": 1.9015344214475025e-05,
+          "mean_cumulative_physical_disturbance": 150.8628872221121,
+          "cumulative_disturbance_standard_error": 0.2573464403291462,
+          "mean_unnormalized_vector_mse": 0.0010966547110274085
+        },
+        {
+          "kappa": 0.0,
+          "q": 0.05,
+          "horizon": 256,
+          "mean_terminal_infidelity": 0.0047788582630228895,
+          "terminal_infidelity_standard_error": 0.00035522837455405495,
+          "mean_cumulative_physical_disturbance": 60.271504115210796,
+          "cumulative_disturbance_standard_error": 0.18184863285691294,
+          "mean_unnormalized_vector_mse": 0.02233108286428767
+        },
+        {
+          "kappa": 0.0,
+          "q": 0.05,
+          "horizon": 4096,
+          "mean_terminal_infidelity": 0.00026839694621763773,
+          "terminal_infidelity_standard_error": 1.8378159033115496e-05,
+          "mean_cumulative_physical_disturbance": 248.8473451954237,
+          "cumulative_disturbance_standard_error": 0.31602390574339684,
+          "mean_unnormalized_vector_mse": 0.0011091090029697124
+        },
+        {
+          "kappa": 0.0001,
+          "q": 0.0,
+          "horizon": 256,
+          "mean_terminal_infidelity": 0.005221831870377916,
+          "terminal_infidelity_standard_error": 0.00045183199403145234,
+          "mean_cumulative_physical_disturbance": 59.06063648939196,
+          "cumulative_disturbance_standard_error": 0.14207506923952049,
+          "mean_unnormalized_vector_mse": 0.023899969147775035
+        },
+        {
+          "kappa": 0.0001,
+          "q": 0.0,
+          "horizon": 4096,
+          "mean_terminal_infidelity": 0.00025740349475715583,
+          "terminal_infidelity_standard_error": 1.96819375572486e-05,
+          "mean_cumulative_physical_disturbance": 178.83835091484244,
+          "cumulative_disturbance_standard_error": 0.33145199039629797,
+          "mean_unnormalized_vector_mse": 0.001060982294710376
+        },
+        {
+          "kappa": 0.0001,
+          "q": 0.05,
+          "horizon": 256,
+          "mean_terminal_infidelity": 0.00426050826778642,
+          "terminal_infidelity_standard_error": 0.0002779751279078197,
+          "mean_cumulative_physical_disturbance": 61.72466908846226,
+          "cumulative_disturbance_standard_error": 0.15583911998258612,
+          "mean_unnormalized_vector_mse": 0.020252167515316527
+        },
+        {
+          "kappa": 0.0001,
+          "q": 0.05,
+          "horizon": 4096,
+          "mean_terminal_infidelity": 0.00025535473311883865,
+          "terminal_infidelity_standard_error": 1.9344928757438642e-05,
+          "mean_cumulative_physical_disturbance": 274.8619852728566,
+          "cumulative_disturbance_standard_error": 0.30507154214410853,
+          "mean_unnormalized_vector_mse": 0.0010736370168690796
+        },
+        {
+          "kappa": 0.25,
+          "q": 0.0,
+          "horizon": 256,
+          "mean_terminal_infidelity": 0.005035837736539283,
+          "terminal_infidelity_standard_error": 0.0003649669049573117,
+          "mean_cumulative_physical_disturbance": 31.51116695419766,
+          "cumulative_disturbance_standard_error": 0.09465571914419794,
+          "mean_unnormalized_vector_mse": 0.03451707005488495
+        },
+        {
+          "kappa": 0.25,
+          "q": 0.0,
+          "horizon": 4096,
+          "mean_terminal_infidelity": 0.0002729666247233307,
+          "terminal_infidelity_standard_error": 1.7612902359847193e-05,
+          "mean_cumulative_physical_disturbance": 474.032022020348,
+          "cumulative_disturbance_standard_error": 0.146802289364029,
+          "mean_unnormalized_vector_mse": 0.0017721653736004173
+        },
+        {
+          "kappa": 0.25,
+          "q": 0.05,
+          "horizon": 256,
+          "mean_terminal_infidelity": 0.005539167918082306,
+          "terminal_infidelity_standard_error": 0.0003957968290687834,
+          "mean_cumulative_physical_disturbance": 31.62866190683974,
+          "cumulative_disturbance_standard_error": 0.10501891051519052,
+          "mean_unnormalized_vector_mse": 0.035833651012575685
+        },
+        {
+          "kappa": 0.25,
+          "q": 0.05,
+          "horizon": 4096,
+          "mean_terminal_infidelity": 0.00032111905078497277,
+          "terminal_infidelity_standard_error": 2.366630435128183e-05,
+          "mean_cumulative_physical_disturbance": 473.91453525439687,
+          "cumulative_disturbance_standard_error": 0.14638427707354515,
+          "mean_unnormalized_vector_mse": 0.002181080492025965
+        },
+        {
+          "kappa": 0.75,
+          "q": 0.0,
+          "horizon": 256,
+          "mean_terminal_infidelity": 0.007069896447322675,
+          "terminal_infidelity_standard_error": 0.0006772228625214079,
+          "mean_cumulative_physical_disturbance": 9.442325277581489,
+          "cumulative_disturbance_standard_error": 0.04993388839173252,
+          "mean_unnormalized_vector_mse": 0.1421202454564577
+        },
+        {
+          "kappa": 0.75,
+          "q": 0.0,
+          "horizon": 4096,
+          "mean_terminal_infidelity": 0.0004555135950406549,
+          "terminal_infidelity_standard_error": 3.5111736383632155e-05,
+          "mean_cumulative_physical_disturbance": 135.62266341544563,
+          "cumulative_disturbance_standard_error": 0.10742669657382259,
+          "mean_unnormalized_vector_mse": 0.009119799617204069
+        },
+        {
+          "kappa": 0.75,
+          "q": 0.05,
+          "horizon": 256,
+          "mean_terminal_infidelity": 0.007713921885341921,
+          "terminal_infidelity_standard_error": 0.0006537024471119293,
+          "mean_cumulative_physical_disturbance": 9.533180965847963,
+          "cumulative_disturbance_standard_error": 0.05256563639289919,
+          "mean_unnormalized_vector_mse": 0.15509647204128238
+        },
+        {
+          "kappa": 0.75,
+          "q": 0.05,
+          "horizon": 4096,
+          "mean_terminal_infidelity": 0.0004229401581014259,
+          "terminal_infidelity_standard_error": 2.596856371367771e-05,
+          "mean_cumulative_physical_disturbance": 135.46018421370843,
+          "cumulative_disturbance_standard_error": 0.09283872583602044,
+          "mean_unnormalized_vector_mse": 0.008480529936772669
+        }
+      ],
+      "interpretation": "Reproducible stress observations over random directions. No asymptotic fit, optimality inference, or proof assertion."
+    }
+  }
+}
