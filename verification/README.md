@@ -25,3 +25,7 @@ The matrix-fidelity check uses an absolute tolerance of `8e-8` because eigenvalu
 The adaptive-tree check verifies Fisher score additivity with choices depending on preceding outcomes. It does not assume that all measurements use a fixed axis. The recursion grid includes zero and very small mixedness, maximal permitted mixedness, zero exploration floor and two positive floors. Passing this grid does not prove the recurrence for every real parameter or every time.
 
 Monte Carlo values are reproducible stress observations. Their reported standard errors describe uncertainty of the simulated sample means. They are not simultaneous confidence guarantees, an asymptotic scaling fit, evidence of minimax optimality, or validation of a noisy hardware implementation. No test certifies an unrestricted-instrument statement: the implemented learner uses the specified direct rank-one projective measurements.
+
+## Hosted mathematics
+
+The pull-request workflow checks actual commit-pinned GitHub rendering at widths1440and760. It runs only for same-repository pull requests with `contents: read`, no persisted checkout credential and no secret inputs. It probes a representative page, then compares every tracked Markdown mathematical expression with its exact source. The canonical collector and source comparator are under `hosted_math/`. Source-bound reports, HTML and screenshots are retained as workflow artifacts for visual inspection. Artifact retention is limited; a structural pass does not replace proof review or visual inspection.
