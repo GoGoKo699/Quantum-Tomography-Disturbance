@@ -289,7 +289,7 @@ For $`u>0`$, rationalization gives
 
 $$
 d_{\star}(\boldsymbol a)
-=\frac u2\,
+=\frac u2 
  \frac{\sqrt{\kappa+u}}{\sqrt{\kappa+u}+\sqrt\kappa}.
 $$
 
@@ -298,7 +298,7 @@ At $`u=0`$, the disturbance is zero directly, including the pure aligned case. T
 $$
 \frac u4\le d_{\star}(\boldsymbol a)\le\frac u2
 =\frac{r^2}{2}(1-z^2)
-\le2r\,\ell(\boldsymbol a)\le2\ell(\boldsymbol a).
+\le2r \ell(\boldsymbol a)\le2\ell(\boldsymbol a).
 $$
 
 The outcome-conditioned postmeasurement infidelity has instead the average value $`\kappa/2+u/2`$. Its intrinsic eigenbasis floor is not included in the nonselective objective.

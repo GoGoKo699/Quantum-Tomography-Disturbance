@@ -9,7 +9,7 @@ Accurate tomography and low disturbance impose two different demands on a sequen
 The source supplies independent preparations of the same qubit state
 
 $$
-\rho_{r,n}=\frac{I+r\,n\cdot\sigma}{2},\qquad n\in\mathbb S^2,\qquad \frac12\le r\le1.
+\rho_{r,n}=\frac{I+r n\cdot\sigma}{2},\qquad n\in\mathbb S^2,\qquad \frac12\le r\le1.
 $$
 
 The Bloch radius $`r`$ is supplied; the unit direction $`n`$ is unknown and fixed. Set $`\kappa=1-r^2`$ and $`\nu=\kappa/r^2`$. The range bounded away from zero excludes the separate loss of directional identifiability near the maximally mixed state. The supplied spectrum is a favorable assumption for the learner, including in the lower bound.
@@ -20,7 +20,7 @@ $$
 P_{a,\pm}=\frac{I\pm a\cdot\sigma}{2}.
 $$
 
-Its outcome $`b_t\in\lbrace -1,+1\rbrace `$ obeys $`\mathbb E[b_t\mid a_t,n]=r\,n\cdot a_t`$. The specimen leaves immediately in its measured state. No quantum information persists to the next specimen. Arbitrarily long classical records are allowed in the lower bound; the constructive algorithm uses a small numerical state.
+Its outcome $`b_t\in\lbrace -1,+1\rbrace `$ obeys $`\mathbb E[b_t\mid a_t,n]=r n\cdot a_t`$. The specimen leaves immediately in its measured state. No quantum information persists to the next specimen. Arbitrarily long classical records are allowed in the lower bound; the constructive algorithm uses a small numerical state.
 
 There is no outcome-dependent repair, replacement, or feedback rotation on the released specimen. Choosing a later specimen's measurement is allowed. Implementing the selected projective basis as a rotation, a computational-basis measurement, and the inverse rotation is simply the specified Lüders instrument. A different instrument, weak measurement, source oracle, purification, or retained quantum memory is a different access model.
 
@@ -29,7 +29,7 @@ There is no outcome-dependent repair, replacement, or feedback rotation on the r
 Fidelity means the squared Uhlmann fidelity,
 
 $$
-F(\rho,\tau)=\left(\mathrm{Tr}\sqrt{\sqrt\rho\,\tau\sqrt\rho}\right)^2.
+F(\rho,\tau)=\left(\mathrm{Tr}\sqrt{\sqrt\rho \tau\sqrt\rho}\right)^2.
 $$
 
 For a fixed chosen axis $`a`$, forgetting the outcome gives
@@ -39,10 +39,10 @@ $$
 =\frac{I+r(n\cdot a)a\cdot\sigma}{2}.
 $$
 
-The disturbance is $`d_*(n,a)=1-F(\rho_{r,n},\Delta_a\rho_{r,n})`$. The cost of a policy is
+The disturbance is $`d_{*}(n,a)=1-F(\rho_{r,n},\Delta_a\rho_{r,n})`$. The cost of a policy is
 
 $$
-D_T(\pi,n)=\sum_{t=1}^T\mathbb E_{n,\pi}\,d_*(n,a_t).
+D_T(\pi,n)=\sum_{t=1}^T\mathbb E_{n,\pi} d_{*}(n,a_t).
 $$
 
 The expectation includes past outcomes and randomized measurement choices. The outcome average defining $`\Delta_a`$ is taken for the fixed selected axis before fidelity; this is not fidelity with a state additionally averaged over the controller's history. It is also not the sum of infidelities to the individual pure conditional poststates.
@@ -50,17 +50,17 @@ The expectation includes past outcomes and randomized measurement choices. The o
 Write $`z=n\cdot a`$ and $`u=r^2(1-z^2)`$. The qubit fidelity formula gives
 
 $$
-d_*(n,a)=\frac{\kappa+u-\sqrt\kappa\sqrt{\kappa+u}}2.
+d_{*}(n,a)=\frac{\kappa+u-\sqrt\kappa\sqrt{\kappa+u}}2.
 $$
 
 At $`u>0`$, rationalization gives
 
 $$
-d_*(n,a)=\frac u2\frac{\sqrt{\kappa+u}}{\sqrt{\kappa+u}+\sqrt\kappa},\qquad
-\frac u4\le d_*(n,a)\le\frac u2.
+d_{*}(n,a)=\frac u2\frac{\sqrt{\kappa+u}}{\sqrt{\kappa+u}+\sqrt\kappa},\qquad
+\frac u4\le d_{*}(n,a)\le\frac u2.
 $$
 
-At $`u=0`$ define the expression by continuity as zero. Thus $`d(n,a)=u/2`$ is an exact, uniformly equivalent algebraic proxy: $`d/2\le d_*\le d`$. All bounds hold at the pure endpoint, including aligned axes.
+At $`u=0`$ define the expression by continuity as zero. Thus $`d(n,a)=u/2`$ is an exact, uniformly equivalent algebraic proxy: $`d/2\le d_{*}\le d`$. All bounds hold at the pure endpoint, including aligned axes.
 
 Both $`a`$ and $`-a`$ describe the same physical basis. In contrast, the directed reward regret
 

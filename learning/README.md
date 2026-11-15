@@ -27,14 +27,14 @@ The source is a density operator, the selected measurement is a pair of projecto
 Write the fixed source as
 
 $$
-\rho_{r,n}=\frac{I+r\,n\cdot\sigma}{2},
+\rho_{r,n}=\frac{I+r n\cdot\sigma}{2},
 \qquad n\in\mathbb S^2,\qquad \frac12\le r\le1.
 $$
 
 The radius $`r`$ is supplied, so only the direction $`n`$ must be learned. For a selected unit axis $`a`$, the sign outcome has probability
 
 $$
-p_+(n,a)=\frac{1+r\,n\cdot a}{2}.
+p_+(n,a)=\frac{1+r n\cdot a}{2}.
 $$
 
 The projective outcome changes the specimen. Ignoring that outcome for the fixed selected axis gives the state $`\Delta_a(\rho)`$. The physical cost compares this state with the input. The final accuracy compares the source with the separately reported same-radius estimate $`\widehat\rho_T`$. A good terminal estimate does not by itself show that the earlier specimens were measured gently.

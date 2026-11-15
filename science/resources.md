@@ -191,7 +191,7 @@ $$
 using the digital mean-square bounds. It remains to compare that axis with the actually synthesized projective axis. As a function of $`u=r^2[1-(n\cdot a)^2]`$, the physical disturbance satisfies
 
 $$
-\frac14\le\frac{\partial d_*}{\partial u}\le\frac12
+\frac14\le\frac{\partial d_{*}}{\partial u}\le\frac12
 $$
 
 where the derivative is understood by continuity at the pure endpoint. Also $`|u(\widetilde a)-u(a)|\le2\Vert \widetilde a-a\Vert `$. Hence the actual physical disturbance differs by at most $`C\delta`$ per round, uniformly in $`\kappa`$. The total extra term is $`CT\delta`$, a bounded quantity. Substituting $`q=Q\bar\nu/(T\epsilon)`$, $`\nu\le4\kappa`$ and the precision bounds above proves the resource statement.

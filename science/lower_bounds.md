@@ -92,7 +92,7 @@ Consequently
 $$
 \delta_r(n,a)
 =\frac{\kappa+u-\sqrt\kappa\sqrt{\kappa+u}}2
-=\frac u2\,
+=\frac u2 
 \frac{\sqrt{\kappa+u}}
 {\sqrt{\kappa+u}+\sqrt\kappa}.
 \tag{4}
@@ -134,7 +134,7 @@ It integrates to one, vanishes at both endpoints and has prior Fisher informatio
 
 $$
 J_0=\int_{-\alpha}^{\alpha}
-\frac{w'(\theta)^2}{w(\theta)}\,d\theta
+\frac{w'(\theta)^2}{w(\theta)} d\theta
 =\frac{\pi^2}{\alpha^2}=64.
 \tag{7}
 $$
@@ -296,14 +296,14 @@ $$
 \tag{17}
 $$
 
-Put $`c_*=r^2\cos^2(2\alpha)/8\ge1/64`$. Disturbance is nonnegative, so $`\mathcal D_{t-1}\le\mathcal D_T`$. Summing (17) yields
+Put $`c_{*}=r^2\cos^2(2\alpha)/8\ge1/64`$. Disturbance is nonnegative, so $`\mathcal D_{t-1}\le\mathcal D_T`$. Summing (17) yields
 
 $$
 \mathcal D_T
-\ge\frac{c_*T}{J_0+4\mathcal D_T/\kappa},
+\ge\frac{c_{*}T}{J_0+4\mathcal D_T/\kappa},
 \qquad
 4\mathcal D_T^2+\kappa J_0\mathcal D_T
-\ge c_*\kappa T.
+\ge c_{*}\kappa T.
 \tag{18}
 $$
 
@@ -313,7 +313,7 @@ $$
 \begin{aligned}
 M_T^{\pi}\ge\mathcal D_T
 &\ge
-\frac{\sqrt{\kappa^2J_0^2+16c_*\kappa T}-\kappa J_0}{8}\\
+\frac{\sqrt{\kappa^2J_0^2+16c_{*}\kappa T}-\kappa J_0}{8}\\
 &\ge\frac1{16}\sqrt{\kappa T}-8\kappa.
 \end{aligned}
 \tag{19}
@@ -328,10 +328,10 @@ This part applies to every $`r\in[1/2,1]`$, including $`r=1`$. It uses the symme
 Let $`P_n=(I+n\cdot\sigma)/2`$ and let $`\mu`$ be the uniform measure on the Bloch sphere. For $`m`$ pure copies, set
 
 $$
-\Omega_m=\int P_n^{\otimes m}\,d\mu(n)
+\Omega_m=\int P_n^{\otimes m} d\mu(n)
 =\frac{\Pi_m}{m+1},
 \qquad
-Q_{m,a}=\int(n\cdot a)^2P_n^{\otimes m}\,d\mu(n),
+Q_{m,a}=\int(n\cdot a)^2P_n^{\otimes m} d\mu(n),
 \tag{20}
 $$
 
