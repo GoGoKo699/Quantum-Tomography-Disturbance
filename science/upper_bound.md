@@ -87,7 +87,7 @@ The expectation averages the random probe and its one observed sign.
 
 ## Exact conditional variance
 
-Put $`e=\|\boldsymbol n-\boldsymbol w\|^2`$. Unit norms imply $`\boldsymbol n\cdot\boldsymbol w=1-e/2`$. Because $`y^2=r^{-2}=1+\nu`$,
+Put $`e=\Vert \boldsymbol n-\boldsymbol w\Vert ^2`$. Unit norms imply $`\boldsymbol n\cdot\boldsymbol w=1-e/2`$. Because $`y^2=r^{-2}=1+\nu`$,
 
 $$
 \mathbb E[(y-c)^2\mid\text{past}]
@@ -97,17 +97,17 @@ $$
 Moreover,
 
 $$
-\|A^{-1}\boldsymbol a\|^2=\frac1{c^2}+\frac4{s^2},
+\Vert A^{-1}\boldsymbol a\Vert ^2=\frac1{c^2}+\frac4{s^2},
 \qquad
 \boldsymbol w\cdot A^{-1}\boldsymbol a=\frac1c,
 \qquad
 \mathbb E[y-c]=-\frac{ce}{2}.
 $$
 
-Expanding $`\|\boldsymbol g\|^2`$ and subtracting $`\|\mathbb E\boldsymbol g\|^2=1`$ gives
+Expanding $`\Vert \boldsymbol g\Vert ^2`$ and subtracting $`\Vert \mathbb E\boldsymbol g\Vert ^2=1`$ gives
 
 $$
-\mathbb E[\|\boldsymbol g-\boldsymbol n\|^2\mid\text{past}]
+\mathbb E[\Vert \boldsymbol g-\boldsymbol n\Vert ^2\mid\text{past}]
 =
 4+\frac{s^2}{c^2}+\frac{4c^2}{s^2}e
 +\nu\left(\frac1{c^2}+\frac4{s^2}\right).
@@ -120,18 +120,18 @@ The final term is the mixed-state variance floor. At $`\nu=0`$, this reduces to 
 Normalizing any real vector $`\boldsymbol v`$ to $`\boldsymbol w`$ gives
 
 $$
-\|\boldsymbol w-\boldsymbol n\|
-\le2\|\boldsymbol v-\boldsymbol n\|.
+\Vert \boldsymbol w-\boldsymbol n\Vert 
+\le2\Vert \boldsymbol v-\boldsymbol n\Vert .
 $$
 
-For nonzero $`\boldsymbol v`$, use the triangle inequality and $`|\|\boldsymbol v\|-1|\le\|\boldsymbol v-\boldsymbol n\|`$. At zero, the squared inequality follows from $`\|\boldsymbol w-\boldsymbol n\|^2\le4`$ and $`\|\boldsymbol0-\boldsymbol n\|^2=1`$. Thus the algorithm's fixed zero convention is covered.
+For nonzero $`\boldsymbol v`$, use the triangle inequality and $`|\Vert \boldsymbol v\Vert -1|\le\Vert \boldsymbol v-\boldsymbol n\Vert `$. At zero, the squared inequality follows from $`\Vert \boldsymbol w-\boldsymbol n\Vert ^2\le4`$ and $`\Vert \boldsymbol0-\boldsymbol n\Vert ^2=1`$. Thus the algorithm's fixed zero convention is covered.
 
-Write $`M_t=\mathbb E_{\boldsymbol n}\|\boldsymbol v_t-\boldsymbol n\|^2`$. Conditional unbiasedness removes the cross term in the averaging update:
+Write $`M_t=\mathbb E_{\boldsymbol n}\Vert \boldsymbol v_t-\boldsymbol n\Vert ^2`$. Conditional unbiasedness removes the cross term in the averaging update:
 
 $$
 M_t=
 \left(1-\frac1t\right)^2M_{t-1}
-+\frac1{t^2}\mathbb E_{\boldsymbol n}\|\boldsymbol g_t-\boldsymbol n\|^2.
++\frac1{t^2}\mathbb E_{\boldsymbol n}\Vert \boldsymbol g_t-\boldsymbol n\Vert ^2.
 $$
 
 Using $`c_t^2\ge1/2`$, $`s_t^2\le1/2`$, $`\nu\le3`$ and the normalization bound gives
@@ -212,7 +212,7 @@ Combining the two envelopes yields
 
 $$
 M_t\le\frac{100}{t}
-+100\min\left\{\sqrt{\frac\nu t},\frac{\nu}{qt}\right\}
++100\min\lbrace\sqrt{\frac\nu t},\frac{\nu}{qt}\rbrace
 \qquad(q>0).
 $$
 
@@ -224,7 +224,7 @@ For unit directions, squared qubit fidelity gives the exact identity
 
 $$
 1-F(\rho_{r,\boldsymbol n},\rho_{r,\widehat{\boldsymbol n}})
-=\frac{r^2}{4}\|\boldsymbol n-\widehat{\boldsymbol n}\|^2.
+=\frac{r^2}{4}\Vert \boldsymbol n-\widehat{\boldsymbol n}\Vert ^2.
 $$
 
 Normalization therefore implies
@@ -260,7 +260,7 @@ Averaging the tangent draw gives
 $$
 \mathbb E_{\boldsymbol n}\ell_t
 =\frac r2(1-c_t)+\frac{rc_t}{4}
- \mathbb E_{\boldsymbol n}\|\boldsymbol n-\boldsymbol w_t\|^2
+ \mathbb E_{\boldsymbol n}\Vert \boldsymbol n-\boldsymbol w_t\Vert ^2
 \le\frac{s_t^2}{2}+M_{t-1}.
 $$
 
@@ -281,14 +281,14 @@ $$
 Its exact squared-fidelity disturbance is
 
 $$
-d_\star(\boldsymbol a)
+d_{\star}(\boldsymbol a)
 =\frac{\kappa+u-\sqrt\kappa\sqrt{\kappa+u}}2.
 $$
 
 For $`u>0`$, rationalization gives
 
 $$
-d_\star(\boldsymbol a)
+d_{\star}(\boldsymbol a)
 =\frac u2\,
  \frac{\sqrt{\kappa+u}}{\sqrt{\kappa+u}+\sqrt\kappa}.
 $$
@@ -296,7 +296,7 @@ $$
 At $`u=0`$, the disturbance is zero directly, including the pure aligned case. Thus universally
 
 $$
-\frac u4\le d_\star(\boldsymbol a)\le\frac u2
+\frac u4\le d_{\star}(\boldsymbol a)\le\frac u2
 =\frac{r^2}{2}(1-z^2)
 \le2r\,\ell(\boldsymbol a)\le2\ell(\boldsymbol a).
 $$

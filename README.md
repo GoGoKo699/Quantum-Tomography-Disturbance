@@ -6,7 +6,7 @@ For independent qubits with a known Bloch radius $`1/2\le r\le1`$ and an unknown
 
 $$
 D_{\min}(T,r,\epsilon)
-=\Theta\!\left(\log(1+T)+\sqrt{\kappa T}+\frac\kappa\epsilon\right),
+=\Theta\left(\log(1+T)+\sqrt{\kappa T}+\frac\kappa\epsilon\right),
 \qquad \kappa=1-r^2.
 $$
 

@@ -13,7 +13,7 @@ $$
 \qquad \kappa=1-r^2.
 $$
 
-The radius $`r`$ is known. The direction $`n`$ is fixed and unknown. Before specimen $`t`$ is measured, a policy chooses a unit vector $`a_t`$ using its previous classical record and parameter-independent internal randomness. It then performs the two-outcome projective measurement along that axis. For the recorded sign $`B_t\in\{-1,+1\}`$,
+The radius $`r`$ is known. The direction $`n`$ is fixed and unknown. Before specimen $`t`$ is measured, a policy chooses a unit vector $`a_t`$ using its previous classical record and parameter-independent internal randomness. It then performs the two-outcome projective measurement along that axis. For the recorded sign $`B_t\in\lbrace -1,+1\rbrace `$,
 
 $$
 \Pr_n(B_t=b\mid a_t)
@@ -41,10 +41,10 @@ $$
 Both losses depend on the measurement axis, so replacing $`a`$ by $`-a`$ changes neither. For a policy $`\pi`$, define
 
 $$
-D_T^\pi(n)
-=\sum_{t=1}^T\mathbb E_n^\pi\delta_r(n,a_t),
+D_T^{\pi}(n)
+=\sum_{t=1}^T\mathbb E_n^{\pi}\delta_r(n,a_t),
 \qquad
-M_T^\pi=\sup_{n\in\mathbb S^2}D_T^\pi(n).
+M_T^{\pi}=\sup_{n\in\mathbb S^2}D_T^{\pi}(n).
 $$
 
 The final estimator is a unit direction $`\widehat n_T`$, corresponding to the known-radius state $`\widehat\rho_T=\rho_{r,\widehat n_T}`$. Its loss is exactly
@@ -52,17 +52,17 @@ The final estimator is a unit direction $`\widehat n_T`$, corresponding to the k
 $$
 L_r(n,\widehat n)
 =1-F(\rho_{r,n},\rho_{r,\widehat n})
-=\frac{r^2}{4}\|n-\widehat n\|_2^2.
+=\frac{r^2}{4}\Vert n-\widehat n\Vert _2^2.
 \tag{2}
 $$
 
 Let $`\mathcal P(T,r,\epsilon)`$ contain all such policies with
 
 $$
-\sup_n\mathbb E_n^\pi L_r(n,\widehat n_T)\le\epsilon,
+\sup_n\mathbb E_n^{\pi} L_r(n,\widehat n_T)\le\epsilon,
 $$
 
-and define $`D_{\mathrm{opt}}(T,r,\epsilon)=\inf_{\pi\in\mathcal P(T,r,\epsilon)}M_T^\pi`$, with the infimum of an empty class equal to $`+\infty`$.
+and define $`D_{\mathrm{opt}}(T,r,\epsilon)=\inf_{\pi\in\mathcal P(T,r,\epsilon)}M_T^{\pi}`$, with the infimum of an empty class equal to $`+\infty`$.
 
 **Theorem.** There is a universal $`c>0`$ such that, whenever $`T\ge1`$ and $`\mathcal P(T,r,\epsilon)`$ is nonempty,
 
@@ -139,25 +139,25 @@ J_0=\int_{-\alpha}^{\alpha}
 \tag{7}
 $$
 
-For an experiment $`H`$ with Fisher information $`I_\theta(H)`$, any real estimator $`Z=Z(H)`$ and differentiable scalar target $`\psi`$ satisfy the functional van Trees inequality
+For an experiment $`H`$ with Fisher information $`I_{\theta}(H)`$, any real estimator $`Z=Z(H)`$ and differentiable scalar target $`\psi`$ satisfy the functional van Trees inequality
 
 $$
-\mathbb E_w\mathbb E_\theta
+\mathbb E_w\mathbb E_{\theta}
 \left[(Z-\psi(\theta))^2\right]
 \ge
 \frac{
 \left(\mathbb E_w\psi'(\theta)\right)^2
-}{J_0+\mathbb E_w I_\theta(H)}.
+}{J_0+\mathbb E_w I_{\theta}(H)}.
 \tag{8}
 $$
 
-Here and below $`\mathbb E_w`$ averages over the prior. No unbiasedness condition is imposed. For completeness, let $`q_\theta(h)`$ be the likelihood and let $`S=\partial_\theta\log(w(\theta)q_\theta(h))`$ be the joint score. Integration by parts, using the zero boundary values of $`w`$, yields
+Here and below $`\mathbb E_w`$ averages over the prior. No unbiasedness condition is imposed. For completeness, let $`q_{\theta}(h)`$ be the likelihood and let $`S=\partial_{\theta}\log(w(\theta)q_{\theta}(h))`$ be the joint score. Integration by parts, using the zero boundary values of $`w`$, yields
 
 $$
 \mathbb E[(Z-\psi(\theta))S]
 =\mathbb E_w\psi'(\theta),
 \qquad
-\mathbb E S^2=J_0+\mathbb E_w I_\theta(H).
+\mathbb E S^2=J_0+\mathbb E_w I_{\theta}(H).
 $$
 
 Cauchy–Schwarz proves (8). The estimators used below are bounded coordinates or coordinate products, so the required second moments exist. This is the standard Bayesian information inequality; see [Gill and Levit, *Applications of the van Trees inequality*](https://dspace.library.uu.nl/bitstream/handle/1874/1190/van_trees.pdf?isAllowed=y&sequence=1).
@@ -167,7 +167,7 @@ Cauchy–Schwarz proves (8). The estimators used below are bounded coordinates o
 Assume for this section that $`\kappa>0`$. For any unit axis $`a`$, the conditional Fisher information of its sign outcome is
 
 $$
-I_\theta(a)
+I_{\theta}(a)
 =\frac{r^2(a\cdot n'(\theta))^2}
 {1-r^2(n(\theta)\cdot a)^2}.
 \tag{9}
@@ -183,7 +183,7 @@ $$
 The denominator in (9) is at least $`\kappa`$. Using (1),
 
 $$
-I_\theta(a)
+I_{\theta}(a)
 \le\frac{2d_r(n(\theta),a)}\kappa
 \le\frac{4\delta_r(n(\theta),a)}\kappa.
 \tag{10}
@@ -200,9 +200,9 @@ $$
 Its likelihood is the product of parameter-independent action kernels and the conditional Bernoulli probabilities. The action kernels therefore contribute no derivative of their own. The conditional score increment of each sign has mean zero given the previous history and the current axis. Score increments are thus orthogonal in expectation, giving
 
 $$
-I_\theta(H_t)
-=\mathbb E_\theta^\pi
-\sum_{s=1}^t I_\theta(a_s).
+I_{\theta}(H_t)
+=\mathbb E_{\theta}^{\pi}
+\sum_{s=1}^t I_{\theta}(a_s).
 \tag{11}
 $$
 
@@ -212,13 +212,13 @@ Let the Bayes cumulative disturbance be
 
 $$
 \mathcal D_t
-=\mathbb E_w D_t^\pi(n(\theta)).
+=\mathbb E_w D_t^{\pi}(n(\theta)).
 $$
 
 Equations (10)–(11) imply the information budget
 
 $$
-\mathbb E_w I_\theta(H_t)
+\mathbb E_w I_{\theta}(H_t)
 \le\frac{4\mathcal D_t}\kappa.
 \tag{12}
 $$
@@ -238,7 +238,7 @@ $$
 the information budget gives
 
 $$
-\mathbb E_w\mathbb E_\theta
+\mathbb E_w\mathbb E_{\theta}
 \left[((\widehat n_T)_x-\sin\theta)^2\right]
 \ge
 \frac{\cos^2\alpha}{J_0+4\mathcal D_T/\kappa}.
@@ -248,7 +248,7 @@ $$
 The uniform final fidelity guarantee and (2) imply that the left side is at most $`4\epsilon/r^2`$. Rearranging proves
 
 $$
-M_T^\pi\ge\mathcal D_T
+M_T^{\pi}\ge\mathcal D_T
 \ge
 \frac{\kappa r^2\cos^2\alpha}{16\epsilon}
 -\frac{\kappa J_0}{4}.
@@ -258,7 +258,7 @@ $$
 In particular, because $`r\ge1/2`$ and $`\cos^2\alpha\ge1/2`$,
 
 $$
-M_T^\pi\ge\frac{\kappa}{128\epsilon}-16\kappa.
+M_T^{\pi}\ge\frac{\kappa}{128\epsilon}-16\kappa.
 \tag{15}
 $$
 
@@ -278,7 +278,7 @@ On the patch, $`\psi_2'(\theta)=\cos(2\theta)\ge\cos(2\alpha)`$. Also,
 $$
 \begin{aligned}
 |Z_t-\psi_2(\theta)|^2
-&\le\|a_ta_t^{\mathsf T}-n(\theta)n(\theta)^{\mathsf T}\|_F^2\\
+&\le\Vert a_ta_t^{\mathsf T}-n(\theta)n(\theta)^{\mathsf T}\Vert _F^2\\
 &=2\left(1-(n(\theta)\cdot a_t)^2\right)\\
 &=\frac{4d_r(n(\theta),a_t)}{r^2}
 \le\frac{8\delta_r(n(\theta),a_t)}{r^2}.
@@ -311,7 +311,7 @@ Solving this quadratic inequality gives the explicit bound
 
 $$
 \begin{aligned}
-M_T^\pi\ge\mathcal D_T
+M_T^{\pi}\ge\mathcal D_T
 &\ge
 \frac{\sqrt{\kappa^2J_0^2+16c_*\kappa T}-\kappa J_0}{8}\\
 &\ge\frac1{16}\sqrt{\kappa T}-8\kappa.
@@ -367,9 +367,9 @@ Consider any procedure that obtains an axis from $`m`$ pure copies, allowing eve
 
 $$
 \begin{aligned}
-\mathbb E_\mu\mathbb E[(n\cdot a)^2]
-&=\int\operatorname{Tr}\left(Q_{m,a}M_m(da)\right)\\
-&\le\beta_m\int\operatorname{Tr}\left(\Omega_mM_m(da)\right)
+\mathbb E_{\mu}\mathbb E[(n\cdot a)^2]
+&=\int\mathrm{Tr}\left(Q_{m,a}M_m(da)\right)\\
+&\le\beta_m\int\mathrm{Tr}\left(\Omega_mM_m(da)\right)
 =\beta_m.
 \end{aligned}
 \tag{23}
@@ -382,7 +382,7 @@ The mixed source is a channel of the pure source:
 $$
 \rho_{r,n}=\mathcal E_r(P_n),
 \qquad
-\mathcal E_r(X)=rX+(1-r)\operatorname{Tr}(X)\frac I2.
+\mathcal E_r(X)=rX+(1-r)\mathrm{Tr}(X)\frac I2.
 \tag{24}
 $$
 
@@ -391,7 +391,7 @@ Any policy history obtained from $`m`$ mixed copies can therefore be produced by
 At time $`t`$ the axis uses only $`m=t-1`$ previous copies. From (1) and (23),
 
 $$
-\mathbb E_\mu\mathbb E\delta_r(n,a_t)
+\mathbb E_{\mu}\mathbb E\delta_r(n,a_t)
 \ge\frac{r^2}{4}(1-\beta_{t-1})
 =\frac{r^2t}{(t+1)(t+2)}.
 \tag{25}
@@ -401,7 +401,7 @@ Consequently every policy, whether or not it satisfies a terminal accuracy const
 
 $$
 \begin{aligned}
-M_T^\pi
+M_T^{\pi}
 &\ge r^2\sum_{t=1}^T\frac{t}{(t+1)(t+2)}\\
 &=r^2\left(H_{T+1}+\frac2{T+2}-2\right)\\
 &\ge\frac1{24}\log(1+T).
@@ -418,20 +418,20 @@ The prior used in (14) and (19) is the fixed local prior (6); the prior in (26) 
 Equations (15), (19) and (26) give, with universal constants,
 
 $$
-M_T^\pi\ge c_1\log(1+T),
+M_T^{\pi}\ge c_1\log(1+T),
 \qquad
-M_T^\pi\ge c_2\sqrt{\kappa T}-C_2\kappa,
+M_T^{\pi}\ge c_2\sqrt{\kappa T}-C_2\kappa,
 \qquad
-M_T^\pi\ge c_3\frac\kappa\epsilon-C_3\kappa.
+M_T^{\pi}\ge c_3\frac\kappa\epsilon-C_3\kappa.
 \tag{27}
 $$
 
-Because $`0\le\kappa\le3/4`$ and $`\log(1+T)\ge\log2`$, the startup terms are bounded by a universal multiple of the first lower bound. Thus each of $`\log(1+T)`$, $`\sqrt{\kappa T}`$ and $`\kappa/\epsilon`$ is at most a universal multiple of $`M_T^\pi`$. Their sum is as well. This proves (3), and taking the infimum over the accuracy-constrained policy class preserves it. At $`\kappa=0`$, (26) alone proves the required conclusion.
+Because $`0\le\kappa\le3/4`$ and $`\log(1+T)\ge\log2`$, the startup terms are bounded by a universal multiple of the first lower bound. Thus each of $`\log(1+T)`$, $`\sqrt{\kappa T}`$ and $`\kappa/\epsilon`$ is at most a universal multiple of $`M_T^{\pi}`$. Their sum is as well. This proves (3), and taking the infimum over the accuracy-constrained policy class preserves it. At $`\kappa=0`$, (26) alone proves the required conclusion.
 
 There is also a source-copy feasibility limit independent of disturbance. The first-moment version of the beta calculation above gives the standard Haar prediction bound
 
 $$
-\mathbb E_\mu\mathbb E
+\mathbb E_{\mu}\mathbb E
 \frac{1+n\cdot\widehat n_T}{2}
 \le\frac{T+1}{T+2}
 $$

@@ -30,7 +30,7 @@ Chapter 1 can be consulted as a reference for operators, norms and elementary pr
 | A pure state can be written $`vv^*`$ for a unit vector $`v`$ | $`P_n=(I+n\cdot\sigma)/2`$ is a pure qubit state; $`n`$ is a real three-vector, not the complex state vector $`v`$ |
 | Measurement effects give probabilities through $`\langle\mu(b),\rho\rangle`$ | The effects are $`P_{a,b}=(I+b\,a\cdot\sigma)/2`$, and $`p_b=\mathrm{Tr}(P_{a,b}\rho)`$ |
 | An adjoint is written $`X^*`$ | The project also uses $`X^\dagger`$ when convenient |
-| Definition 3.11 and Eq. (3.64) define $`F_{\mathrm W}(\rho,\tau)=\|\sqrt\rho\sqrt\tau\|_1`$ | This project's fidelity is $`F(\rho,\tau)=F_{\mathrm W}(\rho,\tau)^2`$ |
+| Definition 3.11 and Eq. (3.64) define $`F_{\mathrm W}(\rho,\tau)=\Vert \sqrt\rho\sqrt\tau\Vert _1`$ | This project's fidelity is $`F(\rho,\tau)=F_{\mathrm W}(\rho,\tau)^2`$ |
 
 The fidelity square is essential. For a pure output projector $`P`$, this project has $`F(\rho,P)=\mathrm{Tr}(\rho P)`$, whereas the book's root fidelity is the square root of that probability. Loss here is $`1-F`$, not $`1-F_{\mathrm W}`$.
 
@@ -87,7 +87,7 @@ $$
 p_+(1-p_+)=\frac{481}{2500}=0.1924.
 $$
 
-For the sign variable $`b\in\{-1,+1\}`$, the mean and variance are instead
+For the sign variable $`b\in\lbrace -1,+1\rbrace `$, the mean and variance are instead
 
 $$
 \mathbb E b=p_+-p_-=\frac{12}{25},
@@ -123,7 +123,7 @@ For two qubit states with Bloch vectors $`x,y`$, squared fidelity is
 $$
 F(\rho_x,\rho_y)
 =\frac{1+x\cdot y+
-       \sqrt{(1-\|x\|^2)(1-\|y\|^2)}}2.
+       \sqrt{(1-\Vert x\Vert ^2)(1-\Vert y\Vert ^2)}}2.
 $$
 
 Substituting the input and output yields the physical disturbance

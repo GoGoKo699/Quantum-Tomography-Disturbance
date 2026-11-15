@@ -20,7 +20,7 @@ $$
 P_{a,\pm}=\frac{I\pm a\cdot\sigma}{2}.
 $$
 
-Its outcome $`b_t\in\{-1,+1\}`$ obeys $`\mathbb E[b_t\mid a_t,n]=r\,n\cdot a_t`$. The specimen leaves immediately in its measured state. No quantum information persists to the next specimen. Arbitrarily long classical records are allowed in the lower bound; the constructive algorithm uses a small numerical state.
+Its outcome $`b_t\in\lbrace -1,+1\rbrace `$ obeys $`\mathbb E[b_t\mid a_t,n]=r\,n\cdot a_t`$. The specimen leaves immediately in its measured state. No quantum information persists to the next specimen. Arbitrarily long classical records are allowed in the lower bound; the constructive algorithm uses a small numerical state.
 
 There is no outcome-dependent repair, replacement, or feedback rotation on the released specimen. Choosing a later specimen's measurement is allowed. Implementing the selected projective basis as a rotation, a computational-basis measurement, and the inverse rotation is simply the specified Lüders instrument. A different instrument, weak measurement, source oracle, purification, or retained quantum memory is a different access model.
 
@@ -29,7 +29,7 @@ There is no outcome-dependent repair, replacement, or feedback rotation on the r
 Fidelity means the squared Uhlmann fidelity,
 
 $$
-F(\rho,\tau)=\left(\operatorname{Tr}\sqrt{\sqrt\rho\,\tau\sqrt\rho}\right)^2.
+F(\rho,\tau)=\left(\mathrm{Tr}\sqrt{\sqrt\rho\,\tau\sqrt\rho}\right)^2.
 $$
 
 For a fixed chosen axis $`a`$, forgetting the outcome gives
@@ -77,7 +77,7 @@ The expected fidelity loss to the actual conditional pure poststate is $`\kappa/
 After $`T`$ rounds the controller outputs a classical unit vector $`\hat n_T`$ and the same-radius state $`\hat\rho_T=(I+r\hat n_T\cdot\sigma)/2`$. This output convention avoids conflating angular learning with radial boundary estimation. Exactly,
 
 $$
-1-F(\rho_{r,n},\hat\rho_T)=\frac{r^2}{4}\|n-\hat n_T\|^2.
+1-F(\rho_{r,n},\hat\rho_T)=\frac{r^2}{4}\Vert n-\hat n_T\Vert ^2.
 $$
 
 Let $`\mathcal P(T,r,\epsilon)`$ be the policies with $`\sup_n\mathbb E[1-F(\rho_{r,n},\hat\rho_T)]\le\epsilon`$. The quantity studied is
