@@ -1,0 +1,21 @@
+# Quantum Tomography Disturbance
+
+This repository studies the joint finite-parameter accuracy–disturbance frontier for sequential tomography of known-radius qubits. Authoritative science is organized by topic under science/.
+
+Story and physical meaning: README.md; science/interpretation.md.
+Exact source, instrument, chronology, physical objective and minimax quantifiers: science/model.md.
+Uniform theorem and precision regimes: science/frontier.md.
+Constructive controller and explicit sufficient parameters: science/algorithm.md; science/upper_bound.md.
+Converse including biased estimates, random adaptation and unoriented measurement axes: science/lower_bounds.md.
+Preparation, logical control, classical memory/precision and output costs: science/resources.md.
+Prior work, inherited pure endpoint and comparison limits: references/related_work.md; references/bibliography.bib.
+Reproduction commands, finite scope and recorded output: verification/README.md; verification/verify_frontier.py; verification/results.json.
+
+Preserve these distinctions:
+- Known radius r in [1/2,1]; unknown fixed unit Bloch direction; independent source specimens.
+- One direct rank-one Lueders measurement and release per specimen; no output repair/replacement or persistent quantum memory.
+- Fidelity is squared Uhlmann fidelity. The cost averages each selected-axis nonselective output disturbance over policy histories; it is not fidelity after averaging all selected channels together.
+- Directed reward regret is only an upper-bound device and cannot supply the physical lower bound by itself.
+- Terminal same-radius expected infidelity is uniform over directions. C0/T <= epsilon <= epsilon0; constants are universal, not exact leading constants or the optimal feasibility threshold.
+- Pure gentle-learning endpoints, generic information inequalities and variance-aware bandit tools are inherited. No computational speedup or general-instrument lower bound is claimed.
+- Finite numerical checks do not prove the universal minimax theorem or a noisy-hardware guarantee.
