@@ -39,10 +39,10 @@ $$
 =\frac{I+r(n\cdot a)a\cdot\sigma}{2}.
 $$
 
-The disturbance is $`d_{*}(n,a)=1-F(\rho_{r,n},\Delta_a\rho_{r,n})`$. The cost of a policy is
+The disturbance is $`d_{\star}(n,a)=1-F(\rho_{r,n},\Delta_a\rho_{r,n})`$. The cost of a policy is
 
 $$
-D_T(\pi,n)=\sum_{t=1}^T\mathbb E_{n,\pi} d_{*}(n,a_t).
+D_T(\pi,n)=\sum_{t=1}^T\mathbb E_{n,\pi} d_{\star}(n,a_t).
 $$
 
 The expectation includes past outcomes and randomized measurement choices. The outcome average defining $`\Delta_a`$ is taken for the fixed selected axis before fidelity; this is not fidelity with a state additionally averaged over the controller's history. It is also not the sum of infidelities to the individual pure conditional poststates.
@@ -50,17 +50,17 @@ The expectation includes past outcomes and randomized measurement choices. The o
 Write $`z=n\cdot a`$ and $`u=r^2(1-z^2)`$. The qubit fidelity formula gives
 
 $$
-d_{*}(n,a)=\frac{\kappa+u-\sqrt\kappa\sqrt{\kappa+u}}2.
+d_{\star}(n,a)=\frac{\kappa+u-\sqrt\kappa\sqrt{\kappa+u}}2.
 $$
 
 At $`u>0`$, rationalization gives
 
 $$
-d_{*}(n,a)=\frac u2\frac{\sqrt{\kappa+u}}{\sqrt{\kappa+u}+\sqrt\kappa},\qquad
-\frac u4\le d_{*}(n,a)\le\frac u2.
+d_{\star}(n,a)=\frac u2\frac{\sqrt{\kappa+u}}{\sqrt{\kappa+u}+\sqrt\kappa},\qquad
+\frac u4\le d_{\star}(n,a)\le\frac u2.
 $$
 
-At $`u=0`$ define the expression by continuity as zero. Thus $`d(n,a)=u/2`$ is an exact, uniformly equivalent algebraic proxy: $`d/2\le d_{*}\le d`$. All bounds hold at the pure endpoint, including aligned axes.
+At $`u=0`$ define the expression by continuity as zero. Thus $`d(n,a)=u/2`$ is an exact, uniformly equivalent algebraic proxy: $`d/2\le d_{\star}\le d`$. All bounds hold at the pure endpoint, including aligned axes.
 
 Both $`a`$ and $`-a`$ describe the same physical basis. In contrast, the directed reward regret
 

@@ -27,9 +27,9 @@ Chapter 1 can be consulted as a reference for operators, norms and elementary pr
 | --- | --- |
 | A register has a complex Euclidean state space $`\mathcal X`$ | One specimen has $`\mathcal X=\mathbb C^2`$; the retained history is classical |
 | A state is an element of $`\mathrm D(\mathcal X)`$ | The qubit is $`\rho_{r,n}=(I+r n\cdot\sigma)/2`$ |
-| A pure state can be written $`vv^{*}`$ for a unit vector $`v`$ | $`P_n=(I+n\cdot\sigma)/2`$ is a pure qubit state; $`n`$ is a real three-vector, not the complex state vector $`v`$ |
+| A pure state can be written $`vv^{\star}`$ for a unit vector $`v`$ | $`P_n=(I+n\cdot\sigma)/2`$ is a pure qubit state; $`n`$ is a real three-vector, not the complex state vector $`v`$ |
 | Measurement effects give probabilities through $`\langle\mu(b),\rho\rangle`$ | The effects are $`P_{a,b}=(I+b a\cdot\sigma)/2`$, and $`p_b=\mathrm{Tr}(P_{a,b}\rho)`$ |
-| An adjoint is written $`X^{*}`$ | The project also uses $`X^\dagger`$ when convenient |
+| An adjoint is written $`X^{\star}`$ | The project also uses $`X^\dagger`$ when convenient |
 | Definition 3.11 and Eq. (3.64) define $`F_{\mathrm W}(\rho,\tau)=\Vert \sqrt\rho\sqrt\tau\Vert _1`$ | This project's fidelity is $`F(\rho,\tau)=F_{\mathrm W}(\rho,\tau)^2`$ |
 
 The fidelity square is essential. For a pure output projector $`P`$, this project has $`F(\rho,P)=\mathrm{Tr}(\rho P)`$, whereas the book's root fidelity is the square root of that probability. Loss here is $`1-F`$, not $`1-F_{\mathrm W}`$.
@@ -132,7 +132,7 @@ $$
 Substituting the input and output yields the physical disturbance
 
 $$
-d_{*}=1-F(\rho,\Delta_a\rho)
+d_{\star}=1-F(\rho,\Delta_a\rho)
 =\frac{481-20\sqrt{481}}{1250}
 \approx0.0338926.
 $$
@@ -140,7 +140,7 @@ $$
 The convenient proxy is $`d=u/2=81/1250=0.0648`$. It obeys
 
 $$
-\frac d2=0.0324\le d_{*}\le d=0.0648.
+\frac d2=0.0324\le d_{\star}\le d=0.0648.
 $$
 
 This is the same constant-factor comparison used in the theorem.
@@ -162,7 +162,7 @@ p_+[1-F(\rho,P_+)]+p_-[1-F(\rho,P_-)]
 =\frac{481}{1250}=0.3848.
 $$
 
-An eigenbasis measurement has conditional average infidelity $`\kappa/2=0.32`$. The excess in this example is $`0.3848-0.32=0.0648=d`$. By contrast, an outcome-averaged eigenbasis measurement leaves $`\rho`$ unchanged, so its physical cost $`d_{*}`$ is zero. These two raw averages must not be interchanged.
+An eigenbasis measurement has conditional average infidelity $`\kappa/2=0.32`$. The excess in this example is $`0.3848-0.32=0.0648=d`$. By contrast, an outcome-averaged eigenbasis measurement leaves $`\rho`$ unchanged, so its physical cost $`d_{\star}`$ is zero. These two raw averages must not be interchanged.
 
 Reversing $`a`$ exchanges the sign labels but leaves both projectors as a set, the channel and the physical disturbance unchanged. This explains why the lower bound must learn an unoriented axis rather than depend on a chosen reward label.
 

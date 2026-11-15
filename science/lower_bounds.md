@@ -296,14 +296,14 @@ $$
 \tag{17}
 $$
 
-Put $`c_{*}=r^2\cos^2(2\alpha)/8\ge1/64`$. Disturbance is nonnegative, so $`\mathcal D_{t-1}\le\mathcal D_T`$. Summing (17) yields
+Put $`c_{\star}=r^2\cos^2(2\alpha)/8\ge1/64`$. Disturbance is nonnegative, so $`\mathcal D_{t-1}\le\mathcal D_T`$. Summing (17) yields
 
 $$
 \mathcal D_T
-\ge\frac{c_{*}T}{J_0+4\mathcal D_T/\kappa},
+\ge\frac{c_{\star}T}{J_0+4\mathcal D_T/\kappa},
 \qquad
 4\mathcal D_T^2+\kappa J_0\mathcal D_T
-\ge c_{*}\kappa T.
+\ge c_{\star}\kappa T.
 \tag{18}
 $$
 
@@ -313,7 +313,7 @@ $$
 \begin{aligned}
 M_T^{\pi}\ge\mathcal D_T
 &\ge
-\frac{\sqrt{\kappa^2J_0^2+16c_{*}\kappa T}-\kappa J_0}{8}\\
+\frac{\sqrt{\kappa^2J_0^2+16c_{\star}\kappa T}-\kappa J_0}{8}\\
 &\ge\frac1{16}\sqrt{\kappa T}-8\kappa.
 \end{aligned}
 \tag{19}

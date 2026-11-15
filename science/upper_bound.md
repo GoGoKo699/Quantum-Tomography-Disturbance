@@ -186,7 +186,7 @@ $$
 \frac1{\sqrt t}-\frac{a_t}{\sqrt{t-1}}\ge\frac1{t^{3/2}}.
 $$
 
-To verify it, use $`\sqrt{t/(t-1)}\le1+1/[2(t-1)]`$ and $`0<a_t\le1`$, obtaining
+To verify it, use $`\sqrt{t/(t-1)}\le1+1/[2(t-1)]`$ and $`0\lt a_t\le1`$, obtaining
 
 $$
 1-a_t\sqrt{\frac t{t-1}}
